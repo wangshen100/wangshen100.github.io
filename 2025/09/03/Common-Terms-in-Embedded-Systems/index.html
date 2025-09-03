@@ -1,0 +1,766 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Euler_w">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="嵌入式常见名词 2025年8月9日 6:21 {width&#x3D;”13.055555555555555in”height&#x3D;”2.076388888888889in”} A ASIC（专用集成电路） Application-Specific Integrated Circuit. Apiece of custom-designed hardware in a chip.专用集成电路。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Euler空间">
+<meta property="og:url" content="http://example.com/2025/09/03/Common-Terms-in-Embedded-Systems/index.html">
+<meta property="og:site_name" content="Euler空间">
+<meta property="og:description" content="嵌入式常见名词 2025年8月9日 6:21 {width&#x3D;”13.055555555555555in”height&#x3D;”2.076388888888889in”} A ASIC（专用集成电路） Application-Specific Integrated Circuit. Apiece of custom-designed hardware in a chip.专用集成电路。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/media/image1.png">
+<meta property="article:published_time" content="2025-09-03T00:35:34.303Z">
+<meta property="article:modified_time" content="2025-09-03T00:35:34.311Z">
+<meta property="article:author" content="Euler_w">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/media/image1.png">
+  
+  
+  
+  <title>Euler空间</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>浮生记事</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text=""></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-09-03 08:35" pubdate>
+          2025年9月3日 早上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          7.1k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          59 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header"></h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>嵌入式常见名词</p>
+<p>2025年8月9日</p>
+<p>6:21</p>
+<p><img src="/media/image1.png" srcset="/img/loading.gif" lazyload>{width&#x3D;”13.055555555555555in”<br>height&#x3D;”2.076388888888889in”}</p>
+<p><strong>A</strong></p>
+<p><strong>ASIC</strong>（专用集成电路） Application-Specific Integrated Circuit. A<br>piece of custom-designed hardware in a chip.<br>专用集成电路。一个在一个芯片上定制设计的硬件。</p>
+<p><strong>address bus</strong> （地址总线） A set of electrical lines connected to the<br>processor and all of the peripherals withwhich itcommunicates. The<br>address bus is used by the processor to select aspecific memory location<br>or register within a particular peripheral. If the address bus contains<br>n electrical lines, the processor can uniquely address up to 2^n such<br>locations.<br>一个连接处理器与所有外设的，用来通讯的电子线路集。地址总线被处理器用来选择在特定外设中的存储器地址或寄存器。如果地址总线有n条电子线路，处理器能唯一寻址高达2^n的地址空间。</p>
+<p><strong>application software</strong>（应用软件） Describes software modules specific<br>to a particular embedded project. Theapplication software is unlikely to<br>be reusable across embedded platforms, simplybecause each embedded<br>system has a different application.<br>用来描述一个特定的嵌入式项目中的某一软件模块。应用软件不象可重用的交叉嵌入式平台，只是因为每一个嵌入式系统有不同的应用软件。</p>
+<p><strong>assembler</strong>（汇编编译器） A software development tool that translates<br>human-readable assembly languageprograms into machine-language<br>instructions that the processor can understandand execute.<br>一个能把人可读的汇编语言程序转换到处理器可理解和运行的机器指令的软件开发工具。</p>
+<p><strong>assembly language</strong>（汇编语言） A human-readable form of a<br>processor&quot;s instruction set. Most processor-specific functions must be<br>written in assembly language.<br>一种人可读的处理器指令集的形式。大多数处理器相关的功能必须用汇编语言编写。</p>
+<p><strong>B</strong></p>
+<p><strong>BSP</strong>（板卡支持包） See board support package. 见board support<br>package。</p>
+<p><strong>binary semaphore</strong>(二元信号) A type of semaphore with just two states.<br>Also called a mutex. 一种只有两种状态的信号。也叫互斥信号。</p>
+<p><strong>board support package</strong>（板卡支持包） Part of a software package that<br>is processor or platform-dependent. Typically,sample source code for the<br>board support package is provided by the package developer. The sample<br>code must be modified as necessary, compiled, and linked with the<br>remainder of the software package.<br>软件包的具有平台依赖性的那一部分。典型地，板卡支持包的样例源程序由包开发者提供。样例源程序必须能在需要时被修改、编译并与软件包的剩下的部分连接起来。</p>
+<p><strong>bond-out processor</strong> （外合处理器） A special version of a processor<br>that has some of the internal signals brought out to external pins. A<br>bond-out processor is most often found within an emulator and is never<br>intended to be used in a production system.<br>一种特殊版本的处理器，它有一些，内部的信号能传达到外置的针脚上。一个外合处理器绝大多数情况下只用在模拟器上，从来不会被特意用在产品系统上。</p>
+<p><strong>Breakpoint</strong> （断点） A location in a program at which execution is to<br>be stopped and control of the processor switched to the debugger.<br>Mechanisms for creating and removing breakpoints are provided by most<br>debugging tools.<br>一个在程序中的地址，在那里程序的执行被停止，并且处理器的控制转换到了除错程序。大多数除错工具提供增加与删除一个断点的机制。</p>
+<p><strong>C</strong></p>
+<p><strong>CISC</strong>（复杂指令集计算机） Complex Instruction Set Computer. Describes<br>the architecture of a processor family. CISC processors generally<br>feature variable-length instructions, multiple addressing formats, and<br>contain only a small number of general-purpose registers. Intel&quot;s 80x86<br>family is the quintessential example of CISC. Contrast with RISC.<br>复杂指令集计算机。对一种处理器架构的描述。CISC处理器一般产生变长的指令，多种地址格式，并且仅仅有少量的通用寄存器。Intel的80x86家族是是典型的CISC处理器。相对于RISC而言。</p>
+<p><strong>CPU</strong>（中央处理器） Central Processing Unit. The part of a processor<br>that executes instructions. 中央处理器。处理器中执行指令的那一部分。</p>
+<p><strong>Compiler</strong>（编译器） A software development tool that translates<br>high-level language programs into the machine-language instructions that<br>a particular processor can understand and execute.<br>把高级编程语言程序转换到只有特定的处理器能了解和执行的机器指令的一种软件开发包。</p>
+<p><strong>context</strong> （上下文） The current state of the processor&quot;s registers<br>and flags. 处理器当前的状态和标志。</p>
+<p><strong>context switch</strong>（上下文切换） The process of switching from one task<br>to another in a multitasking operating system. A context switch involves<br>saving the context of the running task and restoring the<br>previously-saved context of the other. The piece of code that does this<br>is necessarily processor-specific.<br>在多任务操作系统中我一个任务切换到另一个的过程。上下文切换包括保存正在运行的任务的上下文和恢复早先保存的另一个任务的上下文。做这个工作的一段代码必须具有处理器特权。</p>
+<p><strong>counting semaphore</strong>（计数信号） A type of semaphore that is used to<br>track multiple resources of the same type. An attempt to take a counting<br>semaphore is blocked only if all of the available resources are in use.<br>Contrast with binary semaphore.<br>一种用来跟踪多个相同类型资源的信号灯。仅仅在所有可用的资源都被用完了时才阻塞。相对二元信号而言。</p>
+<p><strong>critical section</strong>（临界段） A block of code that must be executed in<br>sequence and without interruption to guarantee correct operation of the<br>software. See also race condition.<br>一段必须按次序执行的代码，并且不能被中断，否则不能保证软件正确地操作。参照：竞争状况。</p>
+<p><strong>cross-compiler</strong>（交叉编译器） A compiler that runs on a different<br>platform than the one for which it produces object code. A<br>cross-compiler runs on a host computer and produces object code for the<br>target.<br>一个运行在不同的平台上的编译器，其中之一能产生目标代码。交叉编译器在主机上运行并且产生目标机的目标代码。</p>
+<p><strong>D</strong></p>
+<p><strong>DMA</strong>（直接内存访问） Direct Memory Access. A technique for<br>transferring data directly between two peripherals (usually memory and<br>an I&#x2F;O device) with only minimal intervention by the processor. DMA<br>transfers are managed by a third peripheral called a DMA controller.<br>直接内存访问。一种直接在两个外设（通常是内存和I&#x2F;O设备）之间进行数据传输的技术，它只要处理器最少的介入。DMA传输由叫DMA控制器的第三方外设进行管理。</p>
+<p><strong>DRAM</strong>（动态随机访问存储器） Dynamic Random-Access Memory. A type of<br>RAM that maintains its contents only as long as the data stored in the<br>device is refreshed at regular intervals. The refresh cycles are usually<br>performed by a peripheral called a DRAM controller.<br>动态随机访问存储器。一种RAM，存储在其设备中的数据被定期刷新时才能保存它的内容。刷新周期一般由一个叫DRAM控制器的外设完成。</p>
+<p><strong>Data bus</strong>（数据总线） A set of electrical lines connected to the<br>processor and all of the peripherals with which it communicates. When<br>the processor wants to read (write) the contents of a memory location or<br>register within a particular peripheral, it sets the address bus pins<br>appropriately and receives (transmits) the contents on the data bus.<br>连接处理器与所有外设进行通讯的电子线路集。当一个处理器想去写（读）某一特定外设中的存储器地址或寄存器中的内容时，处理器设置地址总线并在数据总线上接收（传输）内容。</p>
+<p><strong>Deadline</strong>（死线） The time at which a particular set of computations<br>must be completed. See also real-time system.<br>一个特定计算必须被完成的时间。请看实时系统。</p>
+<p><strong>Deadlock</strong>（死锁） An unwanted software situation in which an entire<br>set of tasks is blocked, waiting for an event that only a task within<br>the same set can cause. If a deadlock occurs, the only solution is to<br>reset the hardware. However, it is usually possible to prevent deadlocks<br>altogether by following certain software design practices.<br>一种不希望出现的软件状态，在这个状态下，所有的任务因为等待一个只有在这些被阻塞任务之一才能产生的事件而被阻塞。如果死锁发生，唯一解决的方法是重启动硬件。但是，通过可靠的软件设计实践活动通常可以防止死锁的发生。</p>
+<p><strong>debug monitor</strong>（除错监视程序） A piece of embedded software that has<br>been designed specifically for use as a debugging tool. It usually<br>resides in ROM and communicates with a debugger via a serial port or<br>network connection. The debug monitor provides a set of primitive<br>commands to view and modify memory locations and registers, create and<br>remove breakpoints, and execute your program. The debugger combines<br>these primitives to fulfill higher-level requests like program download<br>and single-step.<br>嵌入式软件被特殊设计来作为除错工具的一部分。它一般被放在ROM中，通过串口或网络与除错器进行通讯。除错监视程序提供一个简单的命令集来显示和内存地址和寄存器、建立和移除断点，并且运行你的程序。除错监视器组合这些简单的命令去实现象程序下载各单步调试等高端的请求。</p>
+<p><strong>Debugger</strong>（除错器） A software development tool used to test and<br>debug embedded software. The debugger runs on a host computer and<br>connects to the target through a serial port or network connection.<br>Using a debugger you can download software to the target for immediate<br>execution. You can also set breakpoints and examine the contents of<br>specific memory locations and registers.<br>一个软件开发工具，被用来对嵌入式软件进行测试和除错。除错器在宿主机上运行并且通过串口或网络连接到目标机上。你能使用除错器下载软件到目标机并直接运行。你也可以设置断点并检查特定内存地址或寄存器的内容。</p>
+<p><strong>device driver</strong>（设备驱动程序） A software module that hides the<br>details of a particular peripheral and provides a high-level programming<br>interface to it.<br>一个软件模块，它隐藏特定外设的细节并提供高级的外设编程接口。</p>
+<p><strong>device programmer</strong>（设备编程器） A tool for programming non-volatile<br>memories and other electrically-programmable devices. Typically, the<br>programmable device is inserted into a socket on the device programmer<br>and the contents of a memory buffer are then transferred into it.<br>一种用来对不挥发内存和其他电可编程设备进行编程的工具。典型地，可编程设备被插到设备编程器的接口上，接着内存缓存器中的内容被传送到它里面。</p>
+<p><strong>digital signal processor</strong>（数字信号处理器） A device that is similar<br>to a microprocessor, except that the internal CPU has been optimized for<br>use in applications involving discrete-time signal processing. In<br>addition to standard microprocessor instructions, DSPs usually support a<br>set of complex instructions to perform common signal-processing<br>computations quickly.Common DSP families are TI&quot;s 320Cxx and<br>Motorola&quot;s 5600x series.<br>一种类似于微处理器的的设备，不同的是它内部的CPU被优化，用于特定的应用，如离散信号处理。除了标准的微处理器指令外，DSP常常支持复杂指令集去非常快地完成通用的信号处理计算。通用DSP家庭是TI的320Cxx和Motorola的5600x系列。</p>
+<p><strong>E</strong></p>
+<p><strong>EEPROM</strong>（电可擦的，可编程的只读存储器） Electrically Erasable,<br>Programmable Read-Only Memory. (Pronounced&quot;Double-E&quot;-PROM.) A type of<br>ROM that can be erased electronically.<br>电可擦的，可编程的只读存储器。一种ROM能被电擦除。</p>
+<p><strong>EPROM</strong>（可擦的，可编程的只读存储器） Erasable, Programmable Read-Only<br>Memory. A type of ROM that can be erased by exposing it to ultraviolet<br>light. Once erased, an EPROM can be reprogrammed with the help of a<br>device programmer.<br>一种可用紫外线擦除的存储器。一次擦除后，EPROM可以在设备编程器的帮助下被重编程。</p>
+<p><strong>embedded system</strong>（嵌入式系统） A combination of computer hardware and<br>software, and perhaps additional mechanical or other parts, designed to<br>perform a dedicated function. In some cases, embedded systems are part<br>of a larger system or product, as is the case of an anti-lock braking<br>system in a car. Contrast with general-purpose computer.<br>计算机硬件和软件的结合体，或许还加上机械等其他部分，被设计来完成专门的功能。在一些情况下，嵌入式系统是一个大的系统或产品的一部分，就象汽车上的防抱死装置。与通用计算机相对。</p>
+<p><strong>Emulator</strong>(仿真器) Short for In-Circuit Emulator (ICE). A debugging<br>tool that takes the placeof-emulates-the processor on your target board.<br>Emulators frequently incorporate a special &quot;bond-out&quot; version of the<br>target processor that allows you to observe and record its internal<br>state as your program is executing .<br>在线仿真器的简写。一个在你的目标板上放置仿真的处理器的调试工具。仿真器经常和一目标处理器的一种”外合”版本合在一起，这个版本的的处理器充许你运行程序时观察和记录它的内部状态。</p>
+<p><strong>Executable</strong>（可执行的） A file containing object code that is ready<br>for execution on the target. All that remains is to place the object<br>code into a ROM or download it via a debugging tool.<br>一个包含准备在目标机上运行的目标代码的文件。放置目标代码到ROM中或通过调试工具下载。</p>
+<p><strong>F</strong></p>
+<p><strong>Firmware</strong>（固件） Embedded software that is stored as object code<br>within a ROM. This name is most common among the users of digital signal<br>processors.<br>是作为目标代码存贮在ROM中的嵌入式软件。这个名字在数字信号处理器的用户中相当流行。</p>
+<p><strong>flash memory</strong> （闪存） A RAM-ROM hybrid that can be erased and<br>rewritten under software control. Such devices are divided into blocks,<br>called sectors, that are individually-erasable. Flash memory is common<br>in systems that require nonvolatile data storage at very low cost. In<br>some cases, a large fash memory may even be used instead of a<br>disk-drive.<br>一种RAM-ROM的混血儿，它能在软件的控制下被擦除和重写。一些设备被分成叫段组的块，能个别地可擦。闪存用在需要很便宜的非易失数据存贮器的地方，一个大容量的闪存甚至被用作磁盘驱动器。</p>
+<p><strong>G</strong></p>
+<p><strong>general-purpose computer</strong>（通用计算机） A combination of computer<br>hardware and software that serves as a general-purpose computing<br>platform. For example, a personal computer. Contrast with embedded<br>system.<br>当作通用计算平台的计算机硬件与软件的组合。例如，PC。相对于嵌入式计算机。</p>
+<p><strong>H</strong></p>
+<p><strong>HLL</strong> See high-level language. 查阅高级语言。</p>
+<p><strong>Heap</strong>（堆） An area of memory that is used for dynamic memory<br>allocation. Calls to malloc and free and the C++ operators new and<br>delete result in run-time manipulation of the heap.<br>一块被用作动态内存分配的内存区域。调用malloc和free、C++的操作符new、delete在运行时进行堆的操作。</p>
+<p><strong>high-level language</strong>（高级语言） A language, such as C or C++, that<br>is processor-independent. When programming in a high-level language, it<br>is possible to concentrate on algorithms and applications without<br>worrying about the details of a particular processor.<br>一种语言，象C或C++，是处理器独立的。当在高级语言上编程时，不需要考虑特定处理器的细节，只用关心算法和应用。</p>
+<p><strong>Host</strong>（主机） A general-purpose computer that communicates with the<br>target via a serial port or network connection. This term is usually<br>used to distinguish the computer on which the debugger is running from<br>the embedded system that is being developed.<br>一台通用计算机，它通过串口或网络连接与目标机通讯。这处名词一般用来区别调试程序运行的计算机和被开发的嵌入式系统。</p>
+<p><strong>I</strong></p>
+<p><strong>ICE</strong> In-Circuit Emulator. See emulator. 在线仿真器。查阅仿真器。</p>
+<p><strong>I&#x2F;O</strong>（输入&#x2F;输出） Input&#x2F;Output. The interface between a processor and<br>the world around it. The simplest examples are switches (inputs) and<br>LEDs (outputs).<br>输入&#x2F;输出。处理器与外界的交互界面。最简单的例子是开关（输入）和发光二级管（输出）。</p>
+<p><strong>I&#x2F;O device</strong>（IO设备） A piece of hardware that interfaces between the<br>processor and the outside world. Common examples are switches and LEDs,<br>serial ports, and network controllers.<br>一种介于处理器和外界之间的硬件设备。一般的实例是开关、LED、串口和网络控制器。</p>
+<p><strong>I&#x2F;O map</strong>（I&#x2F;O映射） A table or diagram containing the name and<br>address range of each peripheral addressable by the processor within the<br>I&#x2F;O space. I&#x2F;O maps are a helpful aid in getting to know the target.<br>一张包含每个外设的名字和地址的表格或图表，可由处理器在I&#x2F;O空间中设定地址。I&#x2F;O映射对得知目标机情况非常有利。</p>
+<p><strong>I&#x2F;O space</strong>（I&#x2F;O空间） A special memory region provided by some<br>processors and generally reserved for the attachment of I&#x2F;O devices.<br>Memory locations and registers within an I&#x2F;O space can be accessed only<br>via special instructions. For example, processors in the 80x86 family<br>have special I&#x2F;O space instructions called in and out. Contrast with<br>memory space.<br>一个由处理器提供的特殊内存区域，一般为为I&#x2F;O设备的附件保留。在I&#x2F;O空间的内存位置和寄存器只能通过特殊的指定进行访问。例如：80X86家族的处理器有叫做in<br>&#x2F; out的特殊的I&#x2F;O空间指令。相对内存空间而言。</p>
+<p><strong>ISR</strong>（中断服务程序） See interrupt service routine. instruction<br>pointer（指令指针） A register in the processor that contains the<br>address of the next instruction to be executed. Also known as a program<br>counter. 包含下一条要执行指令地址的处理器中的寄存器。也叫程序计数器。</p>
+<p><strong>Interrupt</strong>（中断） An asynchronous electrical signal from a<br>peripheral to the processor. When the peripheral asserts this signal, we<br>say that an interrupt occurs. When an interrupt occurs, the current<br>state of the processor is saved and an interrupt service routine is<br>executed. When the interrupt service routine exits, control of the<br>processor is returned to whatever part of the software was previously<br>running.<br>一个从外设到处理器的异步电信号。当外设发出这个信号，我们说一个中断发生。当一个中断发生，当前的处理器状态被保存并且中断服务程序开始运行。当中断服务程序退出，对处理器的控制权转到先前运行的那个软件上。</p>
+<p><strong>interrupt latency</strong>（中断延迟） The amount of time between the<br>assertion of an interrupt and the start of the associated interrupt<br>service routine. 在中断发生和相关的中断服务程序运行之间的时间长短。</p>
+<p><strong>interrupt service routine</strong>（中断服务程序） A piece of software<br>executed in response to a particular interrupt.<br>响应特定中断而运行的一小段软件。</p>
+<p><strong>interrupt type</strong>（中断类型） A unique number associated with each<br>interrupt. 和每一个中断相关联的唯一数字。</p>
+<p><strong>interrupt vector</strong> （中断向量） The address of an interrupt service<br>routine. 中断服务程序所在的地址。</p>
+<p><strong>interrupt vector table</strong>（中断向量表） A table containing interrupt<br>vectors and indexed by interrupt type. This table contains the<br>processor&quot;s mapping between interrupts and interrupt service routines<br>and must be initialized by the programmer.<br>一个表格，包含由中断类型决定的中断向量和索引。这个表格包含中断与中断服务程序之间的处理器的映射，必须由程序员进行初始化。</p>
+<p><strong>intertask communication</strong>（进程间通讯） A mechanism used by tasks and<br>interrupt service routines to share information and synchronize their<br>access to shared resources. The most common building blocks of intertask<br>communication are semaphores and mutexes.<br>一种被用来在任务和中断服务程序之间共享信息和同步它们对共享资源访问的机制。大部分进程间通讯的建立的基石是信号灯和互斥。</p>
+<p><strong>K</strong></p>
+<p><strong>Kernel</strong>（内核） An essential part of any multitasking operating<br>system, the kernel contains just the scheduler and context-switch<br>routine.<br>任何多任务操作系统的本质部分，内核仅仅包含调度程序和上下文切换进程。</p>
+<p><strong>L</strong></p>
+<p><strong>Linker</strong>（连接程序） A software development tool that accepts one or<br>more object files as input and outputs a relocatable program. The linker<br>is thus run after all of the source files have been compiled or<br>assembled.<br>一种能把一个或更多目标文件组合成可输入和输出的可重定位程序的开发工具。连接程序在所有的源文件都被编译或汇编之后运行。</p>
+<p>**Locator（**定位程序） A software development tool that assigns<br>physical addresses to the relocatable program produced by the linker.<br>This is the last step in the preparation of software for execution by an<br>embedded system and the resulting file is called an executable. In some<br>cases, the locator&quot;s function may be hidden within the linker.<br>一种分配物理地址给连接程序处理过的可重定位程序的软件开发工具。这是准备一个软件在嵌入式系统中运行的最后一步，并且结果文件叫做可执行的。在一些情况下，定位程序功能隐藏在连接程序中。</p>
+<p><strong>logic analyzer</strong>（逻辑分析仪） A hardware debugging tool that can be<br>used to capture the logic levels (0 or 1) of dozens, or even hundreds,<br>of electrical signals in real-time. Logic analyzers can be quite helpful<br>for debugging hardware problems and complex processor-peripheral<br>interactions.<br>一种硬件调试工具，能捕获实时电信号的许多逻辑电平（0或1），逻辑分析仪在调试硬件问题和复杂的处理外设交互时相当有用。</p>
+<p><strong>M</strong></p>
+<p><strong>memory map</strong>（内存映射） A table or diagram containing the name and<br>address range of each peripheral addressable by the processor within the<br>memory space. Memory maps are a helpful aid in getting to know the<br>target.<br>一个在内存空间中的，包含每个外设的名字和可由处理器设置的地址范围的表格或图表。内存映射有助于了解目标机情况。</p>
+<p><strong>memory-mapped I&#x2F;O</strong>（内存映射I&#x2F;O） An increasingly common hardware<br>design methodology in which I&#x2F;O devices are placed into the memory space<br>rather than the I&#x2F;O space. From the processor&quot;s point of view,<br>memory-mapped I&#x2F;O devices look very much like memory devices.<br>一种日益流行的硬件设计方法，在这种方法中，I&#x2F;O设备被放置在内存空间而不是I&#x2F;O空间。从处理器的观点看，内存映射I&#x2F;O设备看上去很象内存一样。</p>
+<p><strong>memory space</strong>（内存空间） A processor&quot;s standard address space.<br>Contrast with I&#x2F;O space. 一个处理器的标准地址空间。相对I&#x2F;O空间。</p>
+<p><strong>Microcontroller</strong>（微控制器） A microcontroller is very similar to a<br>microprocessor. The main difference is that a microcontroller is<br>designed specifically for use in embedded systems Microcontrollers<br>typically include a CPU, memory (a small amount of RAM and&#x2F;or ROM), and<br>other peripherals on the same chip. Common examples are the 8051,<br>Intel&quot;s 80196, and Motorola&quot;s 68HCxx series.<br>微控制器很像微处理器。主要的差别在于微控制器被特殊设计用在嵌入式系统中。微控制器典型地包括CPU、内存（很小的RAM或ROM），还有其他的外设，它们在同一块芯片上。常见的例子是：8051、Intel80196、Motorola68HCxx系列。</p>
+<p><strong>Microprocessor</strong>（微处理器） A piece of silicon containing a<br>general-purpose CPU. The most common examples are Intel&quot;s 80x86 and<br>Motorola&quot;s 680x0 families.<br>一片包含通用CPU的硅片。常见的例子是：Intel80x86、Motorola 680x0系列。</p>
+<p><strong>Monitor</strong>（监视器） In the context of this book, a debug monitor.<br>However, there is a second meaning for this word that is associated with<br>intertask communication. In that context, a monitor is a language-level<br>synchronization feature.<br>在这本书的上下文中，是指调试监视器。然而，第二个意思与任务间通讯相关联。在那个上下文中，监视器是高级同步机制的特性。</p>
+<p><strong>Multiprocessing</strong>（多处理） The use of more than one processor in a<br>single computer system. So-called &quot;multiprocessor systems&quot; usually<br>have a common memory space through which the processors can communicate<br>and share data. In addition, some multiprocessor systems support<br>parallel processing.<br>在单个的计算机系统中有多个处理器。被叫作”多处理器系统”的一般有公用的内存空间，处理器通过它们进行通讯和共享数据。另外，一些多处理器系统支持并行处理。</p>
+<p><strong>Multitasking</strong> （多任务） The execution of multiple software routines<br>in pseudo-parallel. Each routine represents a separate &quot;thread of<br>execution&quot; and is referred to as a task. The operating system is<br>responsible for simulating parallelism by parceling out the processor&quot;s<br>time.<br>伪并行运行的多个软件程序。每一个程序表现得像分开的”执行的线程”并且被看作是一个任务。操作系统通过分配处理器时间来模拟并行方式。</p>
+<p><strong>Mutex</strong>（互斥） A data structure for mutual exclusion, also known as a<br>binary semaphore. A mutex is basically just a multitasking-aware binary<br>flag that can be used to synchronize the activities of multiple tasks.<br>As such, it can be used to protect critical sections of the code from<br>interruption and shared resources from simultaneous use.<br>表现互斥现象的数据结构，也被当作二元信号灯。一个互斥基本上是一个多任务敏感的二元信号，它能用作同步多任务的行为，它常用作保护从中断来的临界段代码并且在共享同步使用的资源。</p>
+<p><strong>mutual exclusion</strong>（互斥现象） A guarantee of exclusive access to a<br>shared resource. In embedded systems, the shared resource is typically a<br>block of memory, a global variable, or a set of registers. Mutual<br>exclusion can be achieved with the use of a semaphore or mutex.<br>唯一访问共享资源的保证。在嵌入式系统中，共享的资源典型的有内存块或寄存器组。互斥现象能由使用信号灯或互斥完成。</p>
+<p><strong>N</strong></p>
+<p><strong>NVRAM</strong> Non-Volatile Random-Access Memory. A type of RAM that retains<br>its data even when the system is powered down. NVRAM frequently consists<br>of an SRAM and a long-life battery.<br>非易失的随机访问存储器。一种能在系统关机的情况下保持它的数据的RAM。NVRAM常常由SRAM和长寿命电池组成。</p>
+<p><strong>O</strong></p>
+<p><strong>OTP</strong> See one-time programmable. object code（目标代码） A set of<br>processor-readable opcodes and data. The output of compilers,assemblers,<br>linkers, and locators are files containing object code.<br>处理器能读的操作码和数据。编译器、汇编器、连接器和定位器的输出文件都含有目标代码。</p>
+<p><strong>object file</strong>（目标文件） A file containing object code. The output of<br>a compiler or assembler. 包含目标代码的文件。编译器或汇编器的输出。</p>
+<p><strong>one-time programmable</strong>（一次可编程的） Any programmable device, like<br>a PROM, that can be programmed just once by the end user. However, this<br>term is used almost exclusively to refer to microcontrollers with<br>on-chip PROM.<br>任一可编程的设备，像PROM，仅仅能被最终用户编程一次。然而，这个术语一般被专有地使用在拥有片上PROM的微控制器上。</p>
+<p><strong>opcode</strong> A sequence of bits that is recognized by the processor as one<br>of the instructions in its instruction set.<br>一串被处理器验证过的二进制位的序列，它作为其指令集的一个子集。</p>
+<p><strong>operating system</strong>（操作系统） A piece of software that makes<br>multitasking possible. An operating system typically consists of a set<br>of function calls, or software interrupts, and a periodic clock tick.<br>The operating system is responsible for deciding which task should be<br>using the processor at a given time and for controlling access to shared<br>resources.<br>使多任务能够实现的一个软件。一个操作系统典型地由一个函数调用集、软件中断和定期时钟周期组成。一个操作系统负责决定哪一个任务在给定的时间将使用处理器，并且控制对共享资源的访问。</p>
+<p><strong>Oscilloscope</strong>（示波器） A hardware debugging tool that allows you to<br>view the voltage on one or more electrical lines. For example, you might<br>use an oscilloscope to determine if a particular interrupt is currently<br>asserted.<br>一种硬件调试工具，它让你能观察到一个或更多电路上的电压。例如：如果一个特殊的中断发生，你可以用一个示波器去检测它。</p>
+<p><strong>P</strong></p>
+<p><strong>PROM</strong>（可编程只读存储器） Programmable Read-Only Memory. A type of<br>ROM that can be written (programmed) with a device programmer. These<br>memory devices can be programmed only once, so they are sometimes<br>referred to as write-once or one-time programmable devices.<br>可编程只读存储器。能被设备编程器写的一种ROM。这种内存设备可以被编程一次，所以它们有时被作为写一次或一次性编程设备来看待。</p>
+<p><strong>parallel processing</strong>（并行进程） The ability to apply two or more<br>processors to a single computation.<br>一种在单个计算机上运行两个或多个程序的能力。</p>
+<p><strong>Peripheral</strong> （外设） A piece of hardware other than the processor,<br>usually memory or an I&#x2F;O device. The peripheral may reside within the<br>same chip as the processor, in which case it is called an internal<br>peripheral.<br>一种不同于处理器的硬件设备，常指内存或I&#x2F;O设备。外设经常和处理器在一片芯片上，在这种情况下，它被称为集成外设。</p>
+<p><strong>physical address</strong>（物理地址） The actual address that is placed on<br>the address bus when accessing a memory location or register.<br>当访问内存位置或寄存器时，在地址总线上的真实的地址。</p>
+<p><strong>Preemptive</strong>（抢先） A scheduler is said to be preemptive if it allows<br>the running task to be suspended when a higher-priority task becomes<br>ready. Non-preemptive schedulers are easier to implement but less<br>appropriate for embedded systems.<br>当一个高优先级的任务准备好时，充许正在运行的任务被挂起的调度策略被称为优先。无优先的调度策略更容易实现一些但适合在嵌入式系统中使用。</p>
+<p><strong>Polling</strong>(轮询) A method of interfacing with hardware that involves<br>repeatedly reading a status register until the device has reached the<br>awaited state. Device drivers are either polling or interrupt-driven,<br>with the latter being more generally preferred.<br>一种硬件交互方法，不断读状态寄存器，直到设备进入等待状态。设备驱动程序不是轮询的就是中断驱动的，后一种越来越成为首选的。</p>
+<p><strong>Priority</strong>（优先） The relative importance of one task compared to<br>another. 一个任务与其他任务相比的重要关系。</p>
+<p><strong>priority inversion</strong>（优先转置） An unwanted software situation in<br>which a high-priority task is delayed while waiting for access to a<br>shared resource that is not even being used at the time. For all<br>practical purposes, the priority of this task has been lowered during<br>the delay period.<br>一种不希望发生的软件状态，在此状态一个高优先级任务因为等待访问一个那时不再使用的共享资源而被延迟。在所有的实践目标中，这个任务的优先级在延迟周期内都被降低。</p>
+<p><strong>Process</strong>（进程） A word that is often confused with task or thread.<br>The crucial distinction is that all of the tasks in a system share a<br>common memory space. Processes, on the other hand, always have their own<br>private memory space. Processes are common in multi-user systems but are<br>rarely, if ever, found in embedded systems.<br>这个名词经常与任务或线程混淆。至关重要的差别在于系统中的所有任务共享公共的内存空间。进程，另一方面，常常有它们自己的私有内存空间。进程在多用户系统中，但少有地，如有可能，也可在嵌入式系统中。</p>
+<p><strong>Processor</strong>（处理器） A generic term that does not distinction between<br>microprocessor, microcontroller, and digital signal processor.<br>一个对于微处理器、微控制器他数字信号处器无差别的通用术语。</p>
+<p><strong>processor family</strong>（处理器族） A set of related processors, usually<br>successive generations from the same manufacturer. For example, Intel&quot;s<br>80x86 family began with the 8086 and now includes the 80186, 286, 386,<br>486, Pentium, and many others. The later models in a family are<br>typically backwards-compatible with the ones that came before.<br>一个相关的处理器集，常常连续地从一个生产商产生。例如：Intel&quot;s<br>80x86族开始从8086开始，现在有80186, 286, 386, 486,<br>Pentium及其他。在一个族中，稍后的产品典型地向后兼容在它以前生产的产品。</p>
+<p><strong>processor-independent</strong>（处理器无关） A piece of software that is<br>independent of the processor on which it will be run. Most programs that<br>can be written in a high-level language are processor-independent.<br>Contrast with processor-specific.<br>一个与处理器无关的，并能在其上运行的软件。大多数用高级语言编写程序是处理器无关的。相对于处理器定制。</p>
+<p><strong>processor-specific</strong>（处理器定制） A piece of software that is highly<br>dependent on the processor on which it will be run. Such code must<br>usually be written in assembly language. Contrast with<br>processor-independent.<br>一个高度依赖处理器的软件，在上其才能运行。一些代码必须用汇编语言编写。相对于处理器无关。</p>
+<p><strong>Profiler</strong>（明细观察程序） A software development tool that collects<br>and reports execution statistics for your programs. These statistics<br>include the number of calls to each subroutine and the total amount of<br>time spent within each. This data can be used to learn which subroutines<br>are the most critical and, therefore, demand the greatest code<br>efficiency.<br>一种报告你的程序运行统计数据的软件调试工具。这些统计数据包括调用每个子程序的次数和用去的时间。这些数据常被用来了解哪些子程序是最关键的，并且，由此要求使最好的代码有效率。</p>
+<p>program counter See instruction pointer.</p>
+<p><strong>R</strong></p>
+<p><strong>RAM</strong>（随机访问存储器） Random-Access Memory. A broad classification<br>of memory devices that includes all devices in which individual memory<br>locations may be read or written as required.<br>随机访问存储器。一个包含了所有每个地址能被按需读写的存储设备的粗略分类。</p>
+<p><strong>RISC</strong>（精简指令集计算机） Reduced Instruction Set Computer. Describes<br>the architecture of a processor family. RISC processors generally<br>feature fixed-length instructions, a load-store memory architecture, and<br>a large number of general-purpose registers and&#x2F;or register windows. The<br>MIPS processor family is an excellent example. Contrast with CISC.<br>精简指令集计算机。一个处理器族的描述。RISC处理器一般的特征是固定长度的指令集，一个负载储备存储结构，和大量通用寄存器，及寄存器窗口。MIPS处理器族是极好的例子。相对CISC而言。</p>
+<p><strong>ROM</strong>（只读存储器） Read-Only Memory. A broad classification of memory<br>devices that includes all devices in which the individual memory<br>locations may be read, but not written.<br>只读存储器。一个包括所的的每个地址只能被读，不能被写的存储器的大概分类。</p>
+<p><strong>ROM emulator</strong>（ROM模拟器） A debugging tool that takes the place<br>of-or emulates-the ROM on your target board. A ROM emulator acts very<br>much like a debug monitor, except that it includes its own serial or<br>network connection to the host.<br>一种在你的目标板上代替或模拟ROM的调试工具。ROM模拟器动作起来象一个除错监视器，除了它包含自己连到主机上的串口或网络外。</p>
+<p><strong>ROM monitor</strong> See debug monitor.</p>
+<p><strong>RTOS</strong>（实时操作系统） Real-Time Operating System. An operating system<br>designed specifically for use in real-time systems.<br>实时操作系统。一种被特殊设计来用在实时系统中的操作系统。</p>
+<p><strong>race condition</strong>（竞争状态） A situation in which the outcome of a<br>program may be affected by the exact order in which the instructions are<br>executed. Race conditions are only an issue where interrupts and&#x2F;or<br>preemption are possible and where critical sections exist.<br>一种程序运行的结果可能被指令执行的顺序影响的情形。竞争状态仅仅有一种情况下产生，在此处中断或（和）优先抢占是充许的并且有一个临界区存在。</p>
+<p><strong>real-time system</strong>（实时系统） Any computer system, embedded or<br>otherwise, that has deadlines. The following question can be used to<br>distinguish real-time systems from the rest: &quot;Is a late answer as bad,<br>or even worse, than a wrong answer?&quot; In other words, what happens if<br>the computation doesn&quot;t finish in time? If nothing bad happens, it&quot;s<br>not a real-time system. If someone dies or the mission fails, it&quot;s<br>generally considered &quot;hard&quot; real-time, which is meant to imply that<br>the system has &quot;hard&quot; deadlines. Everything in between is &quot;soft&quot;<br>real-time.<br>任何计算机系统，嵌入的或其他的，有一个死线。以下的问题可经被用来区分实时系统与其他的系统：”是迟到的回答坏，还是一个错误的回答坏？”换句话说，如果计算机没有在指定时间内完成它的工作会发生什么？如果什么也没有发生，它不是一个实时系统。如果一些人死或任务失败，它被认为是”硬”实时系统，意思是系统有一个”硬”死线。介于两者之间的是”软”实时系统。</p>
+<p><strong>Recursive</strong>（递归） Said of software that calls itself. Recursion<br>should generally be avoided in an embedded system, since it frequently<br>requires a large stack.<br>自己调用自己的程序的说法。递归一般在嵌入式系统中是不充许的，因为它常常占有大量的堆栈空间。</p>
+<p><strong>Reentrant</strong>（可再入的） Said of software that can be executed multiple<br>times simultaneously. A reentrant function can be safely called<br>recursively or from multiple tasks. The key to making code reentrant is<br>to ensure mutual exclusion whenever accessing global variables or shared<br>registers.<br>可同时多次运行的程序的说法。可再入的函数可以被安全地递归调用或由多任务多次调用。使代码可再入的关键在于确保在访问全局变量或共享寄存器时互斥现象发生。</p>
+<p><strong>Register</strong>（寄存器） A memory location that is part of a processor or<br>an I&#x2F;O device. In other words, it&quot;s not normal memory. Generally, each<br>bit or set of bits within the register controls some behavior of the<br>larger device.<br>是处理器或I&#x2F;O设备一部分的储存器的地址。换句话说，不是标准的储存器。一般地，在寄存器控制每一二进制位或二进制位的集控制大量设备的一些行为。</p>
+<p><strong>Relocatable</strong>（可重定位的） A file containing object code that is<br>almost ready for execution on the target. The final step is to use a<br>locator to fix the remaining relocatable addresses within the code. The<br>result of that process is an executable.<br>包含几乎可以准备好在目标机上运行的目标代码的文件。最后一步是使用定位程序去整理保留在代码中的可重定位地址。这个步骤的结果是一个可执行的程序。</p>
+<p><strong>reset address</strong>（重启地址） The address from which the first<br>instruction will be fetched after the processor is powered on or reset.<br>一个处理器上电或重启后第一个指令能被从之取出来的地址。</p>
+<p><strong>reset code</strong>（重启代码） A small piece of code that is placed at the<br>reset address. The reset code is usually written in assembly language<br>and may simply be the equivalent of &quot;jump to the startup code.&quot;<br>一段被放置在重启地址的代码。重启代码一般用汇编语言编写并且可能相当简单，只是与”跳转到开始代码”这样的意思相同。</p>
+<p><strong>reset vector</strong> See reset address.</p>
+<p><strong>S</strong></p>
+<p><strong>SRAM</strong>（静态随机访问储存器） Static Random-Access Memory. A type of<br>RAM that retains its contents as long as the system is powered on. Data<br>stored in an SRAM is lost when the system is powered down or reset.<br>静态随机访问储存器。一种在系统上电时以保持它的内容的储存器。当系统断电或重启时，保存在SRAM中的内容将丢失。</p>
+<p><strong>Scheduler</strong>（调度程序） The part of an operating system that decides<br>which task to run next. This decision is based on the readiness of each<br>task, their relative priorities, and the specific scheduling algorithm<br>implemented.<br>操作系统中决定下一次哪个任务运行的那部分。决定基于每一个任务的就绪，它们的优先级关系，和特殊调度算法的实现。</p>
+<p><strong>Semaphore</strong>（信号量） A data structure that is used for intertask<br>synchronization. Semaphores are usually provided by the operating<br>system. 用于进程间同步的数据结构。信号灯常常由操作系统提供。</p>
+<p><strong>Simulator</strong>（仿真器） A debugging tool that runs on the host and<br>pretends to be the target processor. A simulator can be used to test<br>pieces of the software before the embedded hardware is available.<br>Unfortunately, attempts to simulate interactions with complex<br>peripherals are often more trouble than they are worth.<br>一种运行在主机上，装作目标机处理器的调试工具。仿真器一般用来测试嵌入式硬件可用之前的软件。不幸地，与模拟与复杂地外设进行交互的尝试常常比它们做到的更差。</p>
+<p><strong>software interrupt</strong>（软件中断） An interruption of a program that is<br>initiated by a software instruction. Software interrupts are commonly<br>used to implement breakpoints and operating system entry points. Unlike<br>true interrupts, they occur synchronously with respect to program<br>execution. In other words, software interrupts always occur at the<br>beginning of an instruction execution cycle.<br>由软件指令发起的的一个程序的中断。软件中断被用来实现中断点他操作系统进入点。不象真实的中断，那些中断在不防碍程序执行时同步发生。换句话说，软件中断常常在指令运行周期的开始发生。</p>
+<p><strong>Stack</strong>（堆栈） An area of memory that contains a last-in-first-out<br>queue of storage for parameters, automatic variables, return addresses,<br>and other information that must be maintained across function calls. In<br>multitasking situations, each task generally has its own stack.<br>一个包含后进先出队列的内存区域，用来存储参数、自动变量、返回地址和其他一些必须在函数调用中进行维护的信息。在多任务情况下，每一个任务一般都有自己的堆栈区。</p>
+<p><strong>stack frame</strong>（堆栈帧） An area of the stack associated with a<br>particular function call. 一个关联特殊函数调用的堆栈区域。</p>
+<p><strong>startup code</strong>（启动代码） A piece of assembly language code that<br>prepares the way for software written in a high-level language. Most<br>C&#x2F;C++ cross-compilers come with startup code that you can modify,<br>compile, and link with your embedded programs.<br>一个汇编语言代码，它为高级语言写的软件准备好运行的前期工作。大多数C&#x2F;C++交叉编译器在你可以修改、编译他连接你的嵌入式程序时与启动代码一起来到。</p>
+<p><strong>T</strong></p>
+<p><strong>Target</strong>（目标机） Another name for the embedded system. This term is<br>usually used during software development, to distinguish the embedded<br>system from the host with which it communicates.<br>嵌入式系统的另一个名字。这个术语常常在软件开发期间使用，用来区别与嵌入式系统通讯的主机。</p>
+<p><strong>Task</strong>（任务） The central abstraction of an operating system. Each<br>task must maintain its own copy of the instruction pointer and<br>general-purpose registers. Unlike processes, tasks share a common memory<br>space and must be careful to avoid overwriting each other&quot;s code and<br>data.</p>
+<p><strong>Thread</strong>（线程） Another name for a task. This name is more common in<br>operating systems that support processes. A task is simply a thread in a<br>single-process system.</p>
+<p><strong>Tracepoint</strong> （跟踪点） Like a breakpoint except that a counter is<br>incremented rather than stopping the program. Tracepoints are not<br>supported by all debugging tools.<br>象中断点，除了停止程序时，计数器还被增加外。跟踪点不是被所有的调试工具支持。</p>
+<p><strong>Trap</strong>（陷入） An interruption of a program that is triggered by the<br>processor&quot;s own internal hardware. For example, the processor might<br>trap if an illegal opcode is found within the program. Compare with<br>software interrupt.<br>一个由处理器内部硬件触发的程序中断。例如，处理器可能在一个错误的代码在程序中被发现时陷入。对比软件中断。</p>
+<p><strong>V</strong></p>
+<p><strong>volatile</strong>（动态） A value that may change without the intervention of<br>software is said to be volatile. For example, values within the<br>registers of some I&#x2F;O devices may change in response to external events.<br>C&quot;s volatile keyword should be used to warn your compiler about any<br>pointers that point to such registers. This will ensure that the actual<br>value is reread each time the data is used.<br>一个可能不需要软件的的干涉就可改变的值被叫作动态。例如：在一些I&#x2F;O设备的寄存器的值可能在响应外部事件时被改变。C语言中的volatile关键字被用来警告你的编译器那是一个指向一些寄存器的指针，请不要优化它。这个将确认在数据使用中的每一时间实际的值是要重新读入的。</p>
+<p><strong>W</strong></p>
+<p><strong>watchdog timer</strong>（看门狗定时器） A hardware timer that is periodically<br>reset by software. If the software crashesor hangs, the watchdog timer<br>will expire, and the entire system will be reset automatically.<br>一种由软件定时重设的硬件定时器。如果软件被破坏而挂起，看门狗定时器将超时，整个系统将自动重启。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div></div>
+      <div>http://example.com/2025/09/03/Common-Terms-in-Embedded-Systems/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Euler_w</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年9月3日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/09/03/The-charm-of-photography/" title="">
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
