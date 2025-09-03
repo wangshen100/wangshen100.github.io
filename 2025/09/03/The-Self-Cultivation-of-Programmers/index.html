@@ -1,0 +1,1188 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Euler_w">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="The Self-Cultivation of Programmers程序员的自我修养(链接和动态库)  目录: 第1部分 简介  第1章 温故而知新  1.1 从HELLO WORLD 说起  1.2 万变不离其宗  1.3 站得高，望得远  1.4 操作系统做什么  1.5 内存不够怎么办  1.6 众人拾柴火焰高      第2部分 静态链接  第2章 编译和链接  2.1 被隐藏了的过程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Euler空间">
+<meta property="og:url" content="http://example.com/2025/09/03/The-Self-Cultivation-of-Programmers/index.html">
+<meta property="og:site_name" content="Euler空间">
+<meta property="og:description" content="The Self-Cultivation of Programmers程序员的自我修养(链接和动态库)  目录: 第1部分 简介  第1章 温故而知新  1.1 从HELLO WORLD 说起  1.2 万变不离其宗  1.3 站得高，望得远  1.4 操作系统做什么  1.5 内存不够怎么办  1.6 众人拾柴火焰高      第2部分 静态链接  第2章 编译和链接  2.1 被隐藏了的过程">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/media/image1.png">
+<meta property="og:image" content="http://example.com/media/image6.png">
+<meta property="og:image" content="http://example.com/media/image12.png">
+<meta property="article:published_time" content="2025-09-03T00:57:24.641Z">
+<meta property="article:modified_time" content="2025-09-03T01:05:11.806Z">
+<meta property="article:author" content="Euler_w">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/media/image1.png">
+  
+  
+  
+  <title>Euler空间</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>浮生记事</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text=""></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-09-03 08:57" pubdate>
+          2025年9月3日 早上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          14k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          120 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header"></h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h3 id="The-Self-Cultivation-of-Programmers"><a href="#The-Self-Cultivation-of-Programmers" class="headerlink" title="The Self-Cultivation of Programmers"></a>The Self-Cultivation of Programmers</h3><p>程序员的自我修养(链接和动态库) </p>
+<h1 id="目录"><a href="#目录" class="headerlink" title="目录:"></a>目录:</h1><ul>
+<li><p>第1部分 简介</p>
+<ul>
+<li><p>第1章 温故而知新</p>
+<ul>
+<li><p>1.1 从HELLO WORLD 说起</p>
+</li>
+<li><p>1.2 万变不离其宗</p>
+</li>
+<li><p>1.3 站得高，望得远</p>
+</li>
+<li><p>1.4 操作系统做什么</p>
+</li>
+<li><p>1.5 内存不够怎么办</p>
+</li>
+<li><p>1.6 众人拾柴火焰高</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>第2部分 静态链接</p>
+<ul>
+<li><p>第2章 编译和链接</p>
+<ul>
+<li><p>2.1 被隐藏了的过程</p>
+</li>
+<li><p>2.2 编译器做了什么</p>
+</li>
+<li><p>2.3 链接器年龄比编译器长</p>
+</li>
+<li><p>2.4 模块拼装——静态链接</p>
+</li>
+</ul>
+</li>
+<li><p>第3章 目标文件里有什么</p>
+<ul>
+<li><p>3.1 目标文件的格式</p>
+</li>
+<li><p>3.2 目标文件是什么样的</p>
+</li>
+<li><p>3.3 挖掘SIMPLESECTION.O</p>
+</li>
+<li><p>3.4 ELF 文件结构描述</p>
+</li>
+<li><p>3.5 链接的接口——符号</p>
+</li>
+<li><p>3.6 调试信息</p>
+</li>
+<li><p>3.7 本章小结</p>
+</li>
+</ul>
+</li>
+<li><p>第4章 静态链接</p>
+<ul>
+<li><p>4.1 空间与地址分配</p>
+</li>
+<li><p>4.2 符号解析与重定位</p>
+</li>
+<li><p>4.3 COMMON 块</p>
+</li>
+<li><p>4.4 C++相关问题</p>
+</li>
+<li><p>4.5 静态库链接</p>
+</li>
+<li><p>4.6 链接过程控制</p>
+</li>
+<li><p>4.7 BFD 库</p>
+</li>
+<li><p>4.8 本章小结</p>
+</li>
+</ul>
+</li>
+<li><p>第5章 WINDOWS PE&#x2F;COFF</p>
+<ul>
+<li><p>5.1 WINDOWS 的二进制文件格式PE&#x2F;COFF 134</p>
+</li>
+<li><p>5.2 PE 的前身——COFF</p>
+</li>
+<li><p>5.3 链接指示信息</p>
+</li>
+<li><p>5.4 调试信息</p>
+</li>
+<li><p>5.5 大家都有符号表</p>
+</li>
+<li><p>5.6 WINDOWS 下的ELF——PE</p>
+</li>
+<li><p>5.7 本章小结</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>第3部分 装载与动态链接</p>
+<ul>
+<li><p>第6章 可执行文件的装载与进程</p>
+<ul>
+<li><p>6.1 进程虚拟地址空间</p>
+</li>
+<li><p>6.2 装载的方式</p>
+</li>
+<li><p>6.3 从操作系统角度看可执行文件的装载</p>
+</li>
+<li><p>6.4 进程虚存空间分布</p>
+</li>
+<li><p>6.5 LINUX 内核装载ELF 过程简介</p>
+</li>
+<li><p>6.6 WINDOWS PE 的装载</p>
+</li>
+<li><p>6.7 本章小结</p>
+</li>
+</ul>
+</li>
+<li><p>第7章 动态链接</p>
+<ul>
+<li><p>7.1 为什么要动态链接</p>
+</li>
+<li><p>7.2 简单的动态链接例子</p>
+</li>
+<li><p>7.3 地址无关代码</p>
+</li>
+<li><p>7.4 延迟绑定（PLT）</p>
+</li>
+<li><p>7.5 动态链接相关结构</p>
+</li>
+<li><p>7.6 动态链接的步骤和实现</p>
+</li>
+<li><p>7.7 显式运行时链接</p>
+</li>
+<li><p>7.8 本章小结</p>
+</li>
+</ul>
+</li>
+<li><p>第8章 LINUX 共享库的组织</p>
+<ul>
+<li><p>8.1 共享库版本</p>
+</li>
+<li><p>8.2 符号版本</p>
+</li>
+<li><p>8.3 共享库系统路径</p>
+</li>
+<li><p>8.4 共享库查找过程</p>
+</li>
+<li><p>8.5 环境变量</p>
+</li>
+<li><p>8.6 共享库的创建和安装</p>
+</li>
+<li><p>8.7 本章小结</p>
+</li>
+</ul>
+</li>
+<li><p>第9章 WINDOWS 下的动态链接</p>
+<ul>
+<li><p>9.1 DLL 简介</p>
+</li>
+<li><p>9.2 符号导出导入表</p>
+</li>
+<li><p>9.3 DLL 优化</p>
+</li>
+<li><p>9.4 C++与动态链接</p>
+</li>
+<li><p>9.5 DLL HELL</p>
+</li>
+<li><p>9.6 本章小结</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>第4部分 库与运行库</p>
+<ul>
+<li><p>第10章 内存</p>
+<ul>
+<li><p>10.1 程序的内存布局</p>
+</li>
+<li><p>10.2 栈与调用惯例</p>
+</li>
+<li><p>10.3 堆与内存管理</p>
+</li>
+<li><p>10.4 本章小结</p>
+</li>
+</ul>
+</li>
+<li><p>第11章 运行库</p>
+<ul>
+<li><p>11.1 入口函数和程序初始化</p>
+</li>
+<li><p>11.2 C&#x2F;C++运行库</p>
+</li>
+<li><p>11.3 运行库与多线程</p>
+</li>
+<li><p>11.4 C++全局构造与析构</p>
+</li>
+<li><p>11.5 FREAD 实现</p>
+</li>
+<li><p>11.6 本章小结</p>
+</li>
+</ul>
+</li>
+<li><p>第12章 系统调用与API</p>
+<ul>
+<li><p>12.1 系统调用介绍</p>
+</li>
+<li><p>12.2 系统调用原理</p>
+</li>
+<li><p>12.3 WINDOWS API</p>
+</li>
+<li><p>12.4 本章小结</p>
+</li>
+</ul>
+</li>
+<li><p>第13章 运行库实现</p>
+<ul>
+<li><p>13.1 C 语言运行库</p>
+</li>
+<li><p>13.2 如何使用MINI CRT</p>
+</li>
+<li><p>13.3 C++运行库实现</p>
+</li>
+<li><p>13.4 如何使用MINI CRT++</p>
+</li>
+<li><p>13.5 本章小结</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p> </p>
+<p><img src="/media/image1.png" srcset="/img/loading.gif" lazyload>{width&#x3D;”13.32638888888889in”<br>height&#x3D;”8.256944444444445in”}</p>
+<p> </p>
+<p>第二步:用自己的理解表达出来</p>
+<p><strong>第一章 温故而知新</strong></p>
+<ul>
+<li><p><strong>计算机体系结构</strong></p>
+<ul>
+<li>计算机最关键的三个部件是 CPU、内存、I&#x2F;O 控制芯片。早期 CPU、内存和<br>I&#x2F;O 控制器都连接在一根总线(bus)上，现代计算机则通过<br>PCI（北桥）连接高速设备，如内存、高速图形设备等，通过<br>ISA（南桥）连接低速设备，如磁盘、USB、键盘、鼠标等。为了提高CPU频率的速度(频率最多到达4Ghz--物理极限),才用SMP(symmetrical<br>Multi-Processing)<br>对称多处理器(适用于处理多个独立的任务),但使用多处理器成本比较高(缓存),因此让这些处理器公用一个缓存,只保留多个核心,这就是多核处理器(multi-processor)</li>
+</ul>
+</li>
+<li><p><strong>系统软件</strong></p>
+<ul>
+<li><p>平台类系统软件包括操作系统、驱动、运行库；工具类系统软件包括编译器等。计算机科学领域很多问题可通过增加中间层解决(比如虚拟机)，如运行库提供应用程序编程接口供应用调用，运行库又调用操作系统内核提供的系统调用接口，系统调用常以软中断形式提供，如<br>Linux 中断号是 0x80。</p>
+</li>
+<li><p>硬件是硬件接口的定义者，操作系统是硬件接口的使用者，硬件规格文档规定了硬件编程接口，操作系统和驱动程序开发者据此编写程序。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>操作系统</strong></p>
+<ul>
+<li><p>操作系统的主要功能要给是提供抽象接口,另外就是管理硬件资源(进程调度),计算机性能有限,因此需要费心思利用好这些硬件资源,资源主要分为:CPU,存储器(内存和磁盘)以及I&#x2F;O设备</p>
+</li>
+<li><p>为了不让CPU空闲时间太长,如果CPU按顺序只执行一个程序,当程序不用到CPU的时候,其他程序也无法用到CPU,导致CPU空闲,因此操作系统经历了多道程序(监控程序,当某个程序不用CPU时,就把另外正在等待CPU资源的程序启动)、分时系统(程序运行一段时间后主动释放CPU权限)、多任务系统(每个应用程序都是一个进程,有自己独立的运行空间和环境,通过抢占式分配CPU资源,即如果进程运行超过一段时间,操作系统就会暂停该进程,讲CPU资源分配给其他正在等待的进程)的发展阶段。多任务系统中，操作系统接管硬件资源，应用程序以进程方式运行，进程地址空间相互隔离，操作系统根据优先级分配<br>CPU，通过时间片分配运行时间。</p>
+</li>
+<li><p>操作系统作为硬件上层,他希望看到的是一个统一的硬件访问模式.<br>因此硬件也逐渐被抽象为一系列的概念. UNIX<br>设备被抽象成文件,将硬件细节交给硬件驱动模块(跟内核一起运行在特权级)来完成，Windows<br>中图像设备抽象成 GDI，声音和多媒体抽象成<br>DirectX，磁盘被抽象成普通文件。硬盘基本存储单位为扇区(每个扇区512字节,数据按照链式存储,才用LBA技术实现逻辑扇区号的划分)，操作系统通过调用驱动接口操作硬件，如读取文件时驱动程序将信息写入<br>I&#x2F;O 端口寄存器，CPU 通过 in 和 out<br>命令读写硬件端口。<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/439770090">[看一遍就理解：IO模型详解]{.underline}</a></p>
+</li>
+</ul>
+</li>
+<li><p><strong>内存管理</strong></p>
+<ul>
+<li><p>为了更高效利用硬件资源,我们必须同时运行多个进程,早期是通过直接将有限的物理内存分配给多个程序使用,因此存在1.地址空间不隔离(所有进程都可以访问物理地址,容易改写其他进程的内存数据)、2.使用效率低(因为内存容量有限,一些存储在磁盘的进程要执行就要将已经在内存中的进程先写回磁盘中,导致高频的进程换入换出)、3.地址容易变化(每次程序装入内存运行需要向内存申请足够大的空间,因此地址不确定,但程序编写时,数据和指令的目标地址是固定的,导致了每次装载后都要重定位)等问题，通过增加虚拟内存中间层解决。操作系统维护进程虚拟内存和物理内存的对应关系，保证进程间地址空间隔离，将虚拟地址空间映射到物理地址空间,物理地址空间是实在的,虚拟地址空间是虚拟的,进程在虚拟空间中执行,每个进程都有自己独立运行的虚拟地址,就能有效做到进程隔离。那么物理地址和虚拟地址之间的映射关系是怎么样的呢?请看下节</p>
+</li>
+<li><p>分段(Segmentation):把一段与程序所需要的内存空间大小的虚拟地址映射到某个物理空间,比如虚拟空间的0x0000~0x2000被映射到物理地址的0x10000~12000上,那么进程访问虚拟空间0x1000的地址,CPU就会将这个地址转换为0x11000进行访问,这样进程就不需要关心物理地址的变化,只需要按照虚拟空间编写代码即可(不需要重定位).但这种映射方法还是比较粗糙,因为还是按照进程为单位映射的,不能解决内存中频繁换入换出的问题,关系如下图:</p>
+</li>
+</ul>
+</li>
+<li><p>分页:根据程序的局部性原理,当一个程序在运行时,在某个时间段只会频繁的用到一部分数据,其他数据其实不会被用到,因此我们想到了用更小粒度的内存分割和映射的方法,使得程序的局部性原理得到充分利用,增加内存的使用率,这就是分页的思想,分页的基本方法是将地址空间人为分成固定大小的页(page),页的最小的空间由硬件决定,,页实际大小由操作系统决定,默认4K&#x2F;4M为1页,同一时刻只能选择一种规格大小的页,对于操作系统来说,页的大小是固定不变的,虚拟空间和物理地址空间使用同一种页的分割方法.我们将程序中的虚拟内存按页的方式进行分割,把常用数据和代码页装载到物理内存中,,把不常用的页保存在磁盘中,等用到的时候再从磁盘取出来,,我们把在虚拟空间的页叫虚拟页(Virtual<br>Page),把物理内存中的叫做物理页(Physical<br>Page),存储在磁盘中的页叫磁盘页(Disk<br>Page),下图为示例的映射关系,如果多个虚拟内存页(VP)被映射到同一物理页(PP),则称为内存共享.</p>
+</li>
+<li><p>上面的VP2和VP3没有实际放到内存中,因此当进程需要用到这两个页的时候,硬件会捕获到这个消息(页错误),然后系统接管进程,负责将VP2&#x2F;VP3从磁盘装入到内存,建立物理内存页和虚拟内存页的映射关系,因为硬件本身就支持这种以页为单位的读写操作,因此存取和交互这些数据很方便,当然虚拟存储的实现需要靠硬件支持,这个硬件是MMU(Meory<br>Management Unit)来进行页映射</p>
+</li>
+<li><p><strong>线程</strong></p>
+<ul>
+<li>线程又称轻量级进程，是程序执行的最小单元.由线程<br>ID、当前指令指针（PC）、寄存器集合以及堆栈组成，线程之间共享数据段、代码段、堆、打开的文件、信号等。多线程可提高程序执行效率，降低阻塞概率，发挥多核<br>CPU 能力，线程间通信更高效。结构如下图:</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><img src="/media/image6.png" srcset="/img/loading.gif" lazyload>{width&#x3D;”6.291666666666667in”<br>height&#x3D;”5.770833333333333in”}</p>
+</blockquote>
+<ul>
+<li>为什么要使用多线程?使用他的好处是什么?线程的访问很自由,它可以访问进程内存中的所有数据,设置包括其他线程的堆栈,并且线程也有自己的私有存储空间.线程总是</li>
+</ul>
+<blockquote>
+<p>并发执行,当线程数量小于多处理器数量的时候,线程的并发是真正的并发,他们运行在不同处理器上,彼此互不干扰,,但当线程数量大于处理器数量(大多数情况下都会发生),就会出现</p>
+<p>一个处理器上处理多个线程的情况;因此对于单核处理器,多线程是模拟出来的,它是让线程轮流执行一小段时间,让其看起来像同时执行.在同一处理器上对不同线程进行切换的行为称为&quot;线程调度&quot;,在线程调度中,线程通常由三种状态,分别是运行(running),就绪(ready),等待(Waiting),处于运行态的线程拥有一段可以持续执行的时间,这段时间称为&quot;时间片&quot;,当时间片用尽,他就会进入就绪态,如果时间片没用尽就开始等待某个时间,那就进入等待态,每当一个线程离开运行态,调度系统就会选择一个处在就绪态的其他线程继续执行,当处于等待态的线程等待的事件发生后,线程就进入就绪态.</p>
+<p>线程调度系统的调度方案由很多种,主流的大多带有优先级和轮询的概念,轮询就是让各个线程都轮流执行一段时间的方法,这决定了线程之间交错执行的特性,而优先级系统决定线程按照什么顺序执行.高优先级的线程可以更早的被执行,线程优先级不仅可以被用户手动配置,系统会根据线程的表现自动调整优先级,使得调度更有效率,通常情况下,频繁进入等待状态的线程(主动进入等待状态,会放弃运行中剩余的时间片份额)比频繁进行大量计算的线程(每次都要把时间片用完)优先级更高,因为I&#x2F;O密集型(频繁进入等待)往往只占用CPU很少的时间,而CPU密集型(进行大量运算)则总会把时间片用光,但优先级过低的线程容易被饿死(总是被优先级高的线程抢占资源,导致一直无法执行),因此为了避免线程饿死,调度系统会逐步提升那些等待时间过久不能得到执行的线程的优先级,在这样的方式下,一个线程只要等待的够久,就一定会执行.</p>
+</blockquote>
+<ul>
+<li>线程 &#x2F;<br>进程调度有运行、就绪、等待三种状态(如上图)。当运行态的线程时间片用尽,就会被强制剥夺CPU使用权,并进入就绪状态(抢占式).在linux上,没有线程的概念,task(任务)等价于线程,共享同一个数据内存空间的多个Task构成了一个进程,linux可以通过3种方式创建task:Fork的速度快,与原任务共享一个写时复制(Copy<br>on<br>Write,多个任务可以自由的读取同一块内存,但当其中一个task试图对其进行修改的时候就会复制一份副本给修改方task进行修改,不影响其他任务继续读取使用)的内存空间,fork需要配合exec才能启动别的任务,如果要产生新线程,就需要用到Clone</li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<ul>
+<li>线程安全方面，线程因为过于灵活,导致多线程同时访问全局变量或者堆数据,很容易出现并发冲突或者竞争冒险,因此保证并发时数据一致性就很重要.如下图,预期线程1和线程2执行完后,i&#x3D;&#x3D;1,但实际结果可能是i&#x3D;2&#x2F;i&#x3D;0;自增&#x2F;减操作出现错误的原因是因为被分为多条指令执行,如果线程执行一半被其他线程打断,就会出错.为了避免出错,我们把单指令的操作称为原子操作,即不会被调度系统打断,很多体系都提供了一些常用的原子指令,使用这些函数就不用担心出现抢占问题.如下:</li>
+</ul>
+<blockquote>
+<p><img src="/media/image12.png" srcset="/img/loading.gif" lazyload></p>
+</blockquote>
+<ul>
+<li>原子操作适用于简单特定的场景,在复杂场景下要保证一个复杂数据结构具有原子性,显然不大合理,因此我们就要引入更通用的手段---涉及同步与锁的概念，我们需要将各个线程对同一数据的访问进行同步,即一个线程对该数据访问还未结束,那其他线程就不得对同一数据进行访问,这样,这个数据的访问就原子化了.同步最常见的就是锁(Lock),他是一种非强制机制,每个线程访问共享资源前会试图获取(Acquire)锁,并在访问结束后释放(release),当锁被占用时,如果由其他线程试图获取锁,就进入等待,知道锁被释放,重新可用.锁的种类由很多,</li>
+</ul>
+<blockquote>
+<p>如二元信号量Binary<br>semaphore(只有两种状态,适用于只能被唯一一个线程独占的资源,比如第一个线程获取锁,第二三个想获取就等待第一个访问完,之后第二个,第三个线程访问完,释放锁,这里要注意的是,第一个线程获取锁,第三个线程释放锁,不同线程对二元信号量的获取&#x2F;释放是合法的)、</p>
+<p>信号量semaphore(允许多个线程并发访问),</p>
+<p>互斥量Mutex(与二元信号量很相似,但它要求哪个线程获取了互斥量就只能这个线程进行释放锁,其他线程去释放这个锁是无效的)</p>
+<p>临界区Critical<br>Section(比互斥量更严格,临界区作用访问仅限于本进程,其他进程无法获取锁)</p>
+<p>读写锁Read-Write<br>Lock(如果多线程只是为了读取,那不用管,如果有一个要进行修改就要用同步手段)</p>
+<p>条件变量Condition<br>Variable(类似于水阀,多个线程可以等待条件变量,在某一时刻条件变量被唤醒,这时候线程恢复执行)等。可重入函数是并发的强力保障，具有不使用或返回静态或全局非<br>const<br>变量、仅依赖调用方参数、不依赖单个资源的锁(如互斥锁)、不调用不可重入函数等特征,一个函数被重入表示这个函数还没有执行完成(一般是多个线程同时执行这个函数,或者函数自己本身的递归调用).</p>
+</blockquote>
+<p> </p>
+<p> </p>
+<ul>
+<li>线程模型:内核线程与Kernel_thread并不是同一回事,用户态的用户线程也不一定与内核态的内核线程一致,他们由三种映射关系</li>
+</ul>
+<blockquote>
+<p>一对一模型:是真正的并发,但内核线程数量受到操作系统限制进而导致用户线程也被限制,频繁切换内核线程调度,上下文切换开销大,导致性能下</p>
+</blockquote>
+<p>多对多模型:多数用户线程映射到少数内核线程,这样一个内核线程阻塞不会导致所有用户进程阻塞,并且用户线程数量也不受限制,但性能没有一对一模型高</p>
+<p><strong>第二章 编译与链接</strong></p>
+<ul>
+<li><p><strong>编译过程</strong></p>
+<ul>
+<li><p>预处理(Propressing)：处理源代码中以 “＃” 开头的预编译指令，如去除<br>#define 展开宏定义、处理 #if 等条件编译指令、处理 #include<br>指令(可递归)插入被包含文件、添加行号和文件名标示、保留 #pragma<br>编译器指令。预编译程序:cc1</p>
+</li>
+<li><p>编译汇编(Compiliation<br>)：对预处理完的文件进行词法分析、语法分析、语义分析及优化，生成汇编代码文件。词法分析将字符分割成记号，语法分析产生语法树，语义分析检查语句意义，现代编译器还会进行中间代码生成和目标代码优化。</p>
+</li>
+<li><p>汇编(Assembly)：将汇编代码转变成机器可执行的指令，产生目标文件。汇编器:as</p>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<ul>
+<li><p><strong>链接(Linking)过程</strong></p>
+<ul>
+<li><p>链接的主要工作包括地址和空间分配、符号决议和重定位。早在高级语言发明之前就存在链接的概念(最开始是用人力计算修正)，随着汇编语言的发展，代码量增大，程序被分割成多个模块，模块间通过符号引用进行通信(通过符号命名子程序或者跳转目标)，链接就是通过符号引用来拼接各个模块的过程。链接器:ld</p>
+</li>
+<li><p>基本的静态链接由目标文件（.O<br>文件）和静态库链接而成，在链接时，对于调用其他模块中函数或变量的情况，由于单独编译不知道其具体地址，所以先空出地址，等待链接器根据符号找到确切地址后填入，这个过程就是重定位，每个被修正的地方叫做一个重定位入口。链接后的文件才是可执行文件(所有地址都被确定)</p>
+</li>
+<li><p>现代大型软件开发动辄几百万行代码,如果都放在一个模块里面,维护和开发的难度是难以想象的,因此会根据具体功能区分处大大小小的模块(中间目标文件),这些模块相互依赖又相互独立,这些模块如何组合成单一程序(可执行文件)?这就是链接的魅力---将各个模块引用的部分处理好并进行正确衔接(符号决议&#x2F;符号绑定)</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>第三章 目标文件</strong></p>
+<ul>
+<li><p><strong>目标文件格式与结构</strong></p>
+<ul>
+<li>在 Linux 下目标文件为 ELF（Executable Linkable Format）文件，Windows<br>下主要为 PE（Portable Executable）格式，它们都是 COFF<br>格式的变种。(不光可执行文件,动态链接库(.so&#x2F;.dll)静态链接库(.a&#x2F;.lib)也是按照这个格式存储的)</li>
+</ul>
+</li>
+<li><p>目标文件(.o文件)中含有编译后的机器指令代码、数据还有一些链接时需要的符号表、字符串等，这些信息按属性以段（Section）的形式存储。一般会在文件头(段表地址)描述整个文件的基本属性(链接方式是静态还是动态,入口地址,文件是否可执行),例如,.text&#x2F;.code<br>经常用来放编译后的机械指令(代码段),.data<br>段(数据段)存放已经初始化的全局变量和局部静态变量(分为大端对齐或者小段对齐)，.bss<br>段存放未初始化的全局变量和局部静态变量或者初始化为 0 的（全局变量 &#x2F;<br>局部静态变量）的大小总和,一般只预留位置,没有内容,因此不算入占用空间。</p>
+</li>
+<li><p>程序指令和程序数据分开存放的原因包括：代码段对于进程只读，数据段可读可修改，分开设置不同权限可防止指令被恶意修改；CPU<br>缓存有数据缓存和指令缓存，分开存储可提高缓存命中率；同一个程序的多个副本进程的程序指令相同，运行时内存中只需一份只读的指令，可节省内存。而私有数据可以根据副本个数分开存放,互不干扰,它在动态链接系统中,节省了大部分内存</p>
+</li>
+</ul>
+<p><strong>第四章 空间与地址分配</strong></p>
+<ul>
+<li><p><strong>空间与地址分配原则</strong></p>
+<ul>
+<li>链接时扫描所有目标文件，将相同段合并，收集符号定义与引用。链接后的<br>VMA（Virtual Memory<br>Address，虚拟内存地址）就是进程空间中的虚拟地址。LMA(Load Memory<br>address),两个地址正常情况下要一致,因此链接过程中我们只需关注VMA +<br>offset和SIZE即可.可以看到,链接之前,所有段的VMA都是0,但要是链接为可执行文件,那VMA的默认地址就要从0x8048000开始分配</li>
+</ul>
+</li>
+<li><p><strong>符号解析与重定位</strong></p>
+<ul>
+<li>段表(Section<br>table)用来描述程序各个段的在文件中的偏移位置或者属性,它是保存了这些段的基本属性的数据结构(段名,段长,偏移量,读写权限等),是除了文件头之外最重要的结构.</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>编译,链接器,装载器就是通过段表来定位和访问各个段的,比如上面的文件头力段表的位置在0x118.文件头描述有11段,我们通过readelf看到确实段表有11个成员,其中第一个是无效的段描述符(NULL),所以有效的段只有10个,字符串表主要保存ELF文件中用到的函数名,变量名等普通字符串,使用偏移来引用字符串(&#39;&#x2F;0&#39;分隔单词),注意到第8个成员,表示段名字符串表,我们通过ELF头文件就能解析出段表和段表字符串表(保存段名)位置,进而解析出所有段的信息</p>
+</blockquote>
+<ul>
+<li>链接过程实际上是把多个不同的目标文件按照一定规则相互连接在一起,这个规则(粘结剂)就是目标地址之间对函数和变量地址的引用(比如A文件定义了test,B文件引用了test),要注意的是,变量和函数要唯一,不然连接过程会发生混淆.我们把函数和变量统称为符号;可执行文件的符号表(Symbol<br>table)信息，记录着目标文件用到的所有符号,每个定义过的符号都会有一个对应的值(符号值也可以称为地址),符号表主要有1.定义在本目标文件的全局符号<br>2.本目标文件引用的全局符号 3.局部符号<br>4.行号信息这几类,链接过程一般关注全局变量即可,符号表也是文件中的一个段,用&quot;.symtab&quot;表示,我们可以使用nm指令来查看符号结果,如下图:(一般我们只需要关注函数和前缀为global的变量)</li>
+</ul>
+<blockquote>
+<p>除了上面这些符号,系统还会定义一些特殊符号,这些符号可能没有在文件中定义,但你可以直接声明并引用它(它已经被定义在链接器脚本中,所以可以在代码里面直接使用);</p>
+<p>C++的链接会更麻烦,涉及到符号签名和extern &quot;C&quot;(因为C++的狗屎机制)</p>
+<p>强符号和弱符号:未初始化的全局变量在目标文件中为弱符号，不会在 BSS<br>段分配空间而是标记为<br>COMMON，因为它是全局变量，可能在其他编译单元有定义，甚至类型大小更大，所以只有到最后链接阶段才确认其大小并在输出文件的<br>BSS 段为其分配空间，也可添加属性强制让未初始化全局变量不被标记为<br>COMMON，使其成为强符号,默认函数和已经初始化的全局变量为强符号,有如下规则:</p>
+<p> </p>
+</blockquote>
+<ul>
+<li><p>通过扫描所有输入目标文件,获得他们各个段的长度属性和位置,并将符号表中的所有符号收集起来,统一放到全局符号表,经过段拼合之后，各个段的虚拟空间地址已被分配，建立映射关系,(核心:重定位)然后根据各个符号原先在目标文件段中的偏移地址计算出虚拟空间地址。重定位表中记录了目标文件中需要重定位的符号在段中的偏移地址，通过与段的虚拟空间地址计算得出需要重定位的实际地址并对引用的地方进行修正(绝对地址修正和相对地址修正)。最终多个目标文件组合成一个可执行文件.(静态链接流程)</p>
+</li>
+<li><p>链接控制脚本:如果我们没有指定链接脚本,ld会使用默认链接脚本,如果用户想控制链接过程来获得特定的链接文件,一般用三种方法:</p>
+</li>
+</ul>
+<blockquote>
+<p>1.使用命令行给链接器指定参数 ld -o -e</p>
+<p>2.将链接指令放在目标文件中</p>
+<p>3.使用链接控制脚本(最灵活,最强大的控制方法),这种脚本也称为模块自定义文件(.def)</p>
+<p>链接脚本语言语法继承AT&amp;T链接器指令,本身并不复杂,语句分为两种,一种是命令语句,一种是赋值语句.结构跟C语言类似</p>
+</blockquote>
+<ul>
+<li><p>语句之间使用分号作为分隔符&quot;;&quot;,赋值语句跟C一致,命令语句一般由一个关键字紧跟后面参数组成如<br>ENTRY 0x0800</p>
+</li>
+<li><p>表达式和运算符与C一致(+,-,*,&#x2F;,&#x3D;) 赋值语句: .&#x3D;0x08480000 +<br>SIZEOF_HEADERS(&quot;.&quot;为当前位置计数器,SIZEOF_HEADERS为</p>
+</li>
+</ul>
+<blockquote>
+<p>程序头部大小),这条语句的作用是用来指定代码在内存中加载&#x2F;运行的位置,并跳过头部信息,避免将其覆盖</p>
+</blockquote>
+<ul>
+<li>注释和字符引用:注释:&#x2F;**&#x2F; 引用:&quot;&quot; 双引号</li>
+</ul>
+<blockquote>
+<p>以下列出几种常用的命令,除了这些指令还有最复杂的SECTIONS指令,其他命令请见ld的使用手册:</p>
+</blockquote>
+<p><strong>第五章 链接器与库</strong></p>
+<ul>
+<li><strong>可执行文件的装载以及进程</strong></li>
+</ul>
+<blockquote>
+<p>可执行文件只有装载到内存中才能继续被CPU执行,基本过程就是把程序从外部存储器读取到内存中的某个位置,随着硬件MMU的诞生,多进程多用户虚拟存储的操作系统出现,可执行文件的装载系统</p>
+<p>变得十分复杂,其中包括覆盖,装载,页映射,以及为什么进程需要有自己独自运行的虚拟空间.代码段数据段堆栈在进程地址空间的分布规则等等.</p>
+</blockquote>
+<ul>
+<li><p>对于静态链接,最常见的方法是直接将各个目标文件进行合并,按次序叠加进行空间排布,但这样会出现一个问题--会出现很多零散的段,而这些零散的段,因为要考虑到对齐(4KB),就会非常浪费空间(大量内部碎片),因此出现了另一种组合方案相似段合并,即将所有中间目标文件的text段合并一起输出到可执行文件的.text段,</p>
+</li>
+<li><p>例如一个C语言运行库中,它由成百上千的语言源代码组成,因此如果将这些零散的目标文件直接提供给库的使用者,很容易造成文件传输管理和组织的不便,因此人们通常将这些目标文件压缩到一起(libc.a<br>包含了1400个目标文件),并对齐进行编号和索引(但这也导致文件偏大,有些无用的功能也被打包,因此常常将每个函数独立放在一个目标文件中,这样在链接的时候就可以单独只链接需要的目标文件,避免将无用的函数链接到可执行文件中)</p>
+</li>
+</ul>
+<blockquote>
+<p>做个比喻:程序相当于菜谱,CPU相当于厨师,厨具则是计算机的其他硬件,整个炒菜的过程就是一个进程,计算机按照程序将输入数据加工成输出数据,就好比人按照菜谱将</p>
+<p>一堆食材加工成美味的一道料理,当然一个菜谱可以有多个厨师一起协同合作完成同一道菜(多线程).</p>
+<p>我们知道,进程运行在独立的虚拟地址空间,这个空间的大小是由计算机硬件平台决定的(32bit&#x2F;64bit),从程序的角度来看,我们可以从C语言指针所占的空间来计算虚拟地址</p>
+<p>空间的大小(比如32bit系统指针的大小为4byte),那么假设在32位平台上的4G虚拟空间我们的进程可以任意使用吗?显然是不行的,因为进程受到操作系统监管,因此进程只能</p>
+<p>使用操作系统分配给进程的地址,方便操作系统监控,如果进程访问未经允许的空间,那么操作系统就会捕获这个非法操作并强制结束进程.(Segmentation<br>Fault)</p>
+<p>那么进程的虚拟地址空间是怎么分配的呢?操作系统会将地址空间分为两部分:一部分给操作系统本身使用比如0xC0000000~0XFFFFFFFF共1G空间,剩下的0x00000000~</p>
+<p>0xBFFFFFFF共3G空间都是给进程使用,因此,理论上讲,进程最多可以使用3G的虚拟空间,那么32位平台能使用超过4GB的空间吗(可以---PAE).PAE的方法是讲原先的32bit地址线</p>
+<p>拓展至36bit地址线,并修改页映射,使得新的映射方式可以访问更多的物理空间(64G).比如一个进程申请一段256MB的虚拟地址使用,他就可以从高于4GB的物理空间中申请多个</p>
+<p>大小为256MB的物理空间,编号为A,BC,D(窗口标识).然后映射到不同的物理空间块(不直接映射到虚拟地址,而是通过页帧号(标记物理内存位置)进行区分),使用A则表示0x10000000~0x2000000这一窗口,用到B则使用0x20000000~0x30000000窗口,以此类推(AWE&#x2F;Mmap)</p>
+</blockquote>
+<ul>
+<li>最简单的装载方式就是把程序所有的指令和数据都装入内存中,这种方式叫做静态装入,但这种方式比较浪费内存,相对于磁盘,内存是昂贵且稀有的,为了更有效的利用内存,采用</li>
+</ul>
+<blockquote>
+<p>局部性原理,将程序最常用的部分驻留在内存中,而不太常用的放在磁盘中,这种方式也叫做动态载入(上面的虚拟页分页有提及),常见的动态装入有两种分别是:</p>
+<p>1.覆盖装入 2.页映射<br>其中覆盖装入在虚拟内存没发明前使用比较广泛,现在几乎被淘汰(DSP嵌入式可能会用到),实现方式为编写一个辅助代码用来管理这些模块何时驻留在内存</p>
+<p>合适被替换掉(覆盖管理器),通过模块之间的依赖关系,画出树状结构,将彼此不会互相调用(禁止跨树间调用)的的进行分类,共享块内存区域,进而增加内存利用率</p>
+</blockquote>
+<ul>
+<li><strong>页映射</strong>是虚拟存储机制的一部分,它没有把可执行文件的&quot;段&quot;(section)当作内存分配最小单位,而是把&quot;页&quot;(page)作为划分单位(大小和硬件有关),如果我们假设每页大小为4K,内存大小为16K,那可以把这个内存分为4页(物理页):F0~F3,如果一个大小为32K的程序(数据+指令),那可以分成8页(虚拟页):P0~P7,如果程序的入口地址在P0,此时系统发现程序不在内存中,就会把内存F0分配给P0,并将P0的内容装入给F0,程序开始运行,运行一段时间后,程序要用到P5,于是将P5装入到F1,依次类推,如果运行只需要4页,那程序就能一直运行下去,但如果要用到其他页,但现在物理内存已经被映射满了,就需要系统的装载管理器做出抉择,是要将已经装载的4个页中的哪一个卸载掉,一般常用</li>
+</ul>
+<blockquote>
+<p>有两种方式:1.FIFO:先入先出,最先分配的最先卸载<br>2.LUR:被使用最小次数的页先卸载.</p>
+</blockquote>
+<ul>
+<li>想来你也发现了,因为页映射的机制,卸载装载比较频繁,如果程序使用物理地址进行操作,每次页装入都要重定位,但如果程序运行在独立的虚拟地址空间就不需要考虑这个问题,因此MMU提供的地址转换功能就能完美适配(地址转换+页映射都交给它),事实上,一个进程最关键的特征就是它拥有一个独立的虚拟地址空间,一个进程的创建有如下几个步骤:</li>
+</ul>
+<blockquote>
+<p>首先一个虚拟空间的各个页都可以映射相应的物理空间(初始化就已经创建好了,只是映射关系需要通过MMU确定),因此这里的创建独立虚拟地址空间不是实际上的创建空间,而是创建映射函数所需要的数据结构,即分配一个页目录(至于虚拟空间和物理页的映射关系交给MMU),这些映射关系等后面程序运行时发现页错误(入口地址)再进行设置;</p>
+<p>其次读取可执行文件头信息,建立虚拟空间和可执行文件的映射关系,相当于当系统发现缺页错误(可执行文件的指令和数据没有真正装入到内存)的时候,它会从物理内存分配一个物理页给程序,然后缺页的部分(存储在磁盘)会读取到这个物理内存中,在通过MMU设置虚拟页和物理页的映射关系,程序才能正常运行,因此系统捕获到缺页错误的时候,就要知道程序所需要的页在可执行文件的哪个位置,这个映射关系就是虚拟空间(虚拟段)和可执行文件之间(偏移量)的映射关系,这种映射关系也只是保存在系统内部的一个数据结构,将映射到虚拟内存区域(VMA)的段叫做虚拟段(VS);由于可执行文件装载的时候实际上是被映射的虚拟空间,所以可执行文件也被叫做映像文件.</p>
+<p>最后将CPU指令寄存器设置为可执行文件入口,这一步最简单,相当于将CPU指令寄存器的控制权交给进程,它涉及到内核堆栈的切换,CPU运行权限的切换,但从进程角度来看,就是简单的跳转指令,跳转段程序入口(entry).随着程序执行,页错误会不断产生,页的装入和收回也频繁发生,随着段数量的增多,就可能产生空间上的浪费,因为系统映射是按照页大小分配的,如果每个段的长度都是页的整数倍,那还好,如果不是,那多余的部分就会多占一个页,一个可执行文件往往有十几个段,有没有方式减少这种浪费?</p>
+</blockquote>
+<ul>
+<li><p>如果我们按每一页高效的装载数据为目的,机会发现,它并不关心各个段所包含的实际内容,只关心装载相关的问题,比如段的权限(可读可写可执行),ELF的段权限往往只有为数不多的几种组合,因此有个简单的方案,将相同权限的段合并一起当作一个段进行映射,比如&quot;.text&quot;(可执行代码)和&quot;.init&quot;(初始化代码),这里引入了一个链接过程中的概念&quot;Segment&quot;(装载段),一个&quot;Segment&quot;可以包含一个或多个属性类似的&quot;Section&quot;(可执行文件程序段&#x2F;链接段).链接的时候将一个Segment作为整体一起映射,减少页面碎片,节省内存空间,因此Segment从装载的角度重新划分ELF的各个段.(一般来说Segment的数量会小于Section数量)</p>
+</li>
+<li><p><strong>动态链接的优点与实现</strong></p>
+<ul>
+<li>P196 Linux<br>内核装载过程:静态链接(所有依赖关系文件打包成一个文件存放于磁盘)使得开发和测试能相对独立进行,但限制程序规模,并且如果一个程序要用到静态库就要多链接1MB的容量,程序一多,静态库占用的空间也叠加,导致空间越来越大.而动态链接把链接过程推迟到运行时(动态选择依赖文件(不是打包是单独一堆文件)先在磁盘完成链接再载入内存)进行，解决了静态链接存在的内存和磁盘空间浪费(共用动态库)、程序开发发布和更新麻烦的问题(静态库的lib.o如果更新,那么所有用到这个静态库的模块都要更新一版发布,如果是动态库则只需要替换.so&#x2F;.ko并且更加灵活,可以动态添加第三方开发的模块,实现程序的拓展<br>MOD)，同时这些动态链接库也相当于程序与系统增加了一个中间层,消除程序对平台的依赖性(A平台和B平台的print函数实现机制不一样,可以将动态链接库分为A,B两个版本差异发布)但动态链接性能低于静态链接，常用延迟绑定(性能换空间)等优化手段。</li>
+</ul>
+</li>
+<li><p>装载时链接举例:当我们运行A.o的时候,系统会首先从磁盘将A.o加载到内存,当系统发现A.o还依赖于Lib.o,于是系统接着加载Lib.o,如果Lib.o还依赖其他文件,则依次加载,</p>
+</li>
+</ul>
+<blockquote>
+<p>等所有依赖的目标文件都加载完毕后,系统开始链接工作(符号解析,重定位),完成这些步骤后,系统加将控制权交给A.o的程序入口处,程序开始执行,如果这是要再运行另一个程序B.o</p>
+<p>发现B.o也依赖Lib.o,这时候就不需要再将Lib.o重新拷贝&#x2F;加载到内存,只需要将B.o和已经在内存中的Lib.o链接起来即可(避免出现多个依赖文件副本的问题,同一时刻,运行在内存中的</p>
+<p>依赖文件只有一份Lib.o),这种方式的好处在于可以将规模很大的工程分割为多个子系统和模块,每个模块由独立小组开发,如果程序需要升级,我们只需要升级程序库或者共享库,将旧的目标文件替换掉即可,下一次运行新版本的目标文件就会被自动装载到内存链接起来,就不需要将所有程序重新链接,比如linux中的glibc他的动态链接形式版本叫libc.o</p>
+</blockquote>
+<ul>
+<li><p>在静态链接的时候,程序最终只有一个可执行文件,他是一个不可分割的整体,但动态链接下,一个程序被分成若干个文件,有程序主要部分(.o)和程序依赖的共享对象(.so)组成,很多时候我们称他们为模块.程序模块在编译时目标地址不确定，因为动态链接的规则是在进行符号解析的时候,这个符号如果是定义在动态库的函数,就会将这个符号的引用标记为一个动态链接的符号,不对它进行地址重定位,需要在装载(运行)时将模块重定位，叫做装载时重定位，Windows<br>下叫做基址重置,共享文件的最终装载地址在编译的时候是不确定的(因此每个文件的装载地址都是0x00000),需要动态装载器根据当前地址空间的空闲情况,动态分配一块足够大的虚拟地址空间给响应的共享对象。</p>
+</li>
+<li><p>对于动态链接的进程地址空间分布:因为需要运行时链接,所以动态链接器与普通的共享对象一样会被映射到进程的地址空间,系统在运行程序前,会将控制前交给动态链接器,等它完成所有的动态链接工作后再把控制权交给要运行的程序,很明显存在一个问题如果模块A分配到0x1000~0x1FFF的地址,模块B分配0x2000~0x2FFF,如果制作程序时,某位开发者发现不需要用到模块A,于是将空闲出来的0x1000~0x1FFF的地址分配给另一个模块C,这样就导致模块A和模块C地址冲突无法同时工作,这种手动告诉动态链接器分配地址的方式简直是灾难.于是有一种静态共享库的方法,他将程序的各个模块统一交给操作系统管理,操作系统在特定的地址分配足够大的地址块,但这就导致模块升级麻烦,因为为了避免地址冲突,就必须保证升级后的共享库全局函数和变量的地址不能改变,因为应用程序已经绑定这些固定地址,一旦更改(比如增加全局变量),就必须重新链接,否则系统会崩溃.那么,有一种方式可以让共享对象在编译的时候不假设自己在进程虚拟地址空间(默认可执行文件的起始地址是0x08040000)?等到运行时在确定进程绝对地址(装载重定位的由来).但装载重定位是针对单个进程的静态修正,装载器会根据进程的加载及地址一次性修正所有的绝对地址引用,但不同进程的基地址通常不同,且虚拟地址映射到不同的物理地址(进程隔离),因此无法实现物理内存的共享.(因此相当于共享部分在每个进程中建立了副本,失去了节省空间的优势)为解决动态模块中有绝对地址引用时指令部分在多个进程之间共享(访问同一块物理内存)的问题，采用地址无关代码方案，把指令中需要修改的部分分离出来与数据部分放在一起,这样剩余的指令部分可以保持不变,而数据部分可以在每个进程中拥有一个副本。我们将跨模块访问分为模块内&#x2F;模块外,并又分了是数据引用还是指令引用,于是得到下面4中情况:对我们来说模块内部的跳转和数据访问都可以通过相对地址调用解决,不需要重定位.因此只要相对位置不变,.不管装载的地址在哪里,都可以通过偏移找到,但对于模块间的数据&#x2F;指令访问就比较麻烦,因为访问目标地址只有在装载的时候才确定,这就要使得这部分成为代码地址无关,将他们放到数据段里面,并建立全局偏移表(GOT),建立一个用来指向这些变量&#x2F;函数的指针数组.当代码要用到该全局变量&#x2F;函数的时候,可以通过GOT中相应的项间接引用(因为引入地址无关代码,因此数据段属于进程私有数据,模块A和模块B都访问全局便利G,如果A修改G,B访问的G还是原来的,因为A,B的数据段是私有的,相当于对G都做了备份,这种访问方式叫做线程私有存储),如果想要实现多个进程共享同一个全局变量用来实现进程间的通信,可以使用&quot;共享数据段&quot;的方式<br>height&#x3D;”8.180555555555555in”}</p>
+</li>
+<li><p>延迟绑定(PLT),因为运行时才进行重定位以及动态GOT定位的存在,动态链接的性能必然低于静态链接,因此引入了优化动态链接性能的方法:因为很多函数在程序执行的时候</p>
+</li>
+</ul>
+<blockquote>
+<p>不会被用到(比如错误处理&#x2F;少用的功能函数),所以一开始九八所有函数都链接号实际上是对性能的一种浪费,因此PLT的基本思想是当函数第一次被用到的时候才进行绑定(局部性原理)</p>
+<p>如果没有用到就不绑定,这样就大大加快程序启动速度.当程序调用到某个外部模块的函数时,PLT会在GOT定位过程中加上间接跳转,即调用函数不通过GOT跳转,而是通过PLT项的结构进行跳转,每个外部函数在PLT都有一个相似的项.这样做的目的是,链接器在初始化的时候就已经将外部函数填入到PLT中,代价更低,这里要注意的是,锁没有被GOT记录,因为它不是每个线程都有自己的备份,而是需要被全局初始化,线程只能访问同一个锁,因此即使锁被多个西安测绘给你加载,它还是会映射到全局的唯一地址,避免每个线程持有独立的锁副本</p>
+</blockquote>
+<ul>
+<li>动态链接的步骤和实现包括动态连接器自举(.interp段,用来决定谁才是动态链接器,并决定位置,且不依赖任何共享对象并且其本身的全局和静态变量重定位的工作由它本身完成,其本身是静态链接的(PIC))、装载共享对象、重定位和初始化堆栈信息。另外还有一种更灵活的链接方式---显式运行时链接,就是让程序自己在运行时控制加载指定模块,并且可以在不需要该模块的时候将其卸载</li>
+</ul>
+<blockquote>
+<p> </p>
+</blockquote>
+<ul>
+<li><p><strong>共享库的管理与维护</strong></p>
+<ul>
+<li>介绍了 ELF<br>共享库的版本命名方式、共享库的符号版本机制、共享库路径（如<br>&#x2F;lib,&#x2F;usr&#x2F;lib,&#x2F;usr&#x2F;local&#x2F;lib<br>等）、查找过程(ld.so.config)、环境变量(LD_LIBRARY_PATH<br>临时改变某个应用程序的共享库查找路径.不影响系统中的其他程序(优先级最高)<br>LD_PRELOAD<br>指定预先装载哪些共享库或者目标文件(等效于&#x2F;etc&#x2F;ld.so.preload)<br>LD_DEBUG 打开动态链接器的调试功能 )、共享库的创建(GCC<br>-shared)与安装(放入对应lib文件夹目录中即可)等内容，以确保大量共享库在更新或升级中兼容版本。</li>
+</ul>
+</li>
+</ul>
+<p><strong>第六章 运行库</strong></p>
+<ul>
+<li><p><strong>内存:</strong></p>
+<ul>
+<li><p><strong>系统使用内存地址的空间被称为内核空间</strong></p>
+</li>
+<li><p><strong>栈---特殊的容器,可以将数据压栈,也可以将压栈的数据弹出(出栈),遵循先进后出规则(FILO),栈总是向下增长(栈底),栈顶由esp寄存器定位,压栈使栈顶地址减少,出栈反之,栈保存了一个</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><strong>函数调用所需要的维护信息,(堆栈帧 Stack Frame<br>SF或者活动记录AR),主要包括:函数返回地址和参数,非静态临时局部变量,保存的上下文,ebp指向当前函数活动记录的顶部</strong></p>
+</blockquote>
+<ul>
+<li><strong>堆与内存管理:全局变量无法动态产生,是编译的时候就定义,因此它不存放在栈里面,它存放在堆里面,堆是一块巨大的内存空间,程序可以请求一块连续的内存并自由使用,申请的内存在</strong></li>
+</ul>
+<blockquote>
+<p><strong>程序主动放弃前都保持有效,一般是通过malloc去申请堆,通过free进行释放,那么堆空间是怎么被申请和管理的呢?如果将进程的堆内存管理交给操作系统,如果程序频繁申请&#x2F;释放,都需要进行系统调用,这样性能开销会很大,因此让程序自己管理分配的堆空间比较合理,而堆空间的分配和管理往往是由程序的运行库操作的.<br>运行库会向操作系统&quot;批发&quot;到一块较大的堆空间,然后&quot;零售&quot;给程序用,如果这些堆空间&quot;售罄&quot;,运行库再根据实际需求向操作系统&quot;进货&quot;,运行库不仅仅会做这些,还管理它批发的堆空间,不会吧同一个房间同时出售给两个人,因此运行库通过堆的分配算法管理堆空间,堆空间的申请其实是调用mmap()系统接口(malloc也是用mmap),他的作用是向操作系统申请一段连续的虚拟地址空间(这个空间可以映射到某个文件),当它不将地址映射到某个文件时,我们称这个空间是匿名的,mmap的前两个参数用来指定申请空间的起始地址(一般填0由系统自动挑选合适起始地址)和长度(大小一般要为系统页大小的整数倍),flag&#x2F;prot参数用来设置申请的空间权限(可读可写可执行)以及映射类型(文件映射&#x2F;匿名映射)</strong></p>
+<p><strong>堆的分配算法---&gt;按需分配&#x2F;释放堆内存:</strong></p>
+<p><strong>1.空闲链表:将堆中各个空闲的内存块按照链表的方式连接起来,当用户请求一块空间时,可以遍历整个链表,直到找到合适的块,当用户释放申请内存空间的时候再将它合并到空闲链表中</strong></p>
+<p><strong>2.位图:将整个堆分为大量的块,每个块大小相同,当用户申请内存的时候总是分配整数个块的空间给用户,第一个块称已分配区域的头部(Head),其他称为已分配区主体(Body),然后用整数数组记录块的使用情况,每个块只有头&#x2F;主体&#x2F;空闲三种状态,因此只要2bit就能表示一个块,故称为位图.(速度快稳定性好但容易产生内存碎片)</strong></p>
+<p><strong>3.对象池:规定每一次分配的空间大小都是一样,并按照这个大小为单位将堆空间划分为大量小块,每次请求只需要找到其中的小块就行</strong></p>
+</blockquote>
+<blockquote>
+<p> </p>
+</blockquote>
+<ul>
+<li><p><strong>运行库的功能与实现</strong></p>
+<ul>
+<li>运行库包含程序入口点的实现、CRT（C Run - Time Library，C<br>运行时库）的初始化过程（如 IO<br>初始化）、库函数的实现、运行库的构造、运行库与并发、C++<br>运行库实现全局构造的方法等。</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>程序使用main开始的吗?其实你会发现并不是,如果main一开始就执行,那main函数传进来的两个参数时怎么来的?其实在执行main函数的时候,已经有一些代码负责准备好main函数要执行所需的环境了,比如堆栈的初始化,一些系统IO也被初始化,这样你才可以放心的使用printf和malloc.在退出main函数后,程序就执行完了吗?u而不是,还会调用exit()相关的函数,完成收尾工作,比如将注册的函数注销.(.init和fini段),.运行init段的代码的函数我们称为入口函数&#x2F;入口点(Entry<br>Point).</p>
+</blockquote>
+<ul>
+<li>C<br>语言运行库包含启动与退出、标准函数、I&#x2F;O、堆、语言实现、调试等功能，还涉及线程局部存储实现等与多线程相关的内容。C++<br>运行库实现了 new&#x2F;delete、C++ 全局构造与析构、入口函数修改、stream 与<br>string 等功能。</li>
+</ul>
+<blockquote>
+<p>在linux操作系统上,I&#x2F;O(输入输出设备)可以看作时文件操作,通过某个函数打开文件都会获得文件描述符&#x2F;句柄,用户操控文件都可以通过该句柄进行(用户无法通过地址访问,只能通过系统提供的接口操作,保证了安全性).</p>
+</blockquote>
+<p> </p>
+<p><strong>第七章 系统调用与 API</strong></p>
+<ul>
+<li><p><strong>系统调用的原理与实现</strong></p>
+<ul>
+<li><p>很多资源由操作系统管理，操作系统提供系统调用接口给应用程序。系统调用运行在内核态，操作系统通过中断从用户态切换到内核态，中断有中断号和中断处理程序，内核中有中断向量表，中断包括硬件中断和软件中断，系统调用就是一种软件中断(终端号+接口号)，如<br>Linux 下的 0x80 号中断。</p>
+</li>
+<li><p>系统调用的实现过程包括触发中断、切换堆栈、中断处理程序。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Windows API 的特点(了解即可)</strong></p>
+<ul>
+<li>Windows 上在系统调用之上封装了 API，API 提供接口给应用程序，API<br>基于系统调用，系统调用在 Windows 上叫做系统服务。API<br>存在的原因是系统调用非常依赖硬件接口，Windows<br>为了程序兼容性加了这个中间层。</li>
+</ul>
+</li>
+</ul>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div></div>
+      <div>http://example.com/2025/09/03/The-Self-Cultivation-of-Programmers/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Euler_w</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年9月3日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/09/03/Common-Terms-in-Embedded-Systems/" title="">
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
